@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000)",
+      "Bash(npx tsc *)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(mv \"WhatsApp Image 2026-05-13 at 6.54.25 PM.jpeg\" public/abhinav.jpeg && ls -la public/abhinav.jpeg)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/abhinav.jpeg)",
+      "Bash(identify public/abhinav.jpeg)",
+      "Bash(python -c \"from PIL import Image; im=Image.open\\('public/abhinav.jpeg'\\); print\\(im.size, im.format\\)\")",
+      "Bash(node -e \"const fs=require\\('fs'\\);const b=fs.readFileSync\\('public/abhinav.jpeg'\\);console.log\\('bytes:',b.length\\)\")",
+      "Bash(curl -s http://localhost:3000 -o page.html)",
+      "Bash(curl -s http://localhost:3000 -o /tmp/page.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/abhinav-scene.jpeg)",
+      "Bash(python \"C:\\\\Users\\\\BIPL\\\\abhinav-portfolio\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\src\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"rotating overlay animation continuous infinite\" --domain ux -n 6)",
+      "Bash(python3 \"C:\\\\Users\\\\BIPL\\\\abhinav-portfolio\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\src\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"rotating shimmer overlay\" --domain ux -n 5)",
+      "Bash(curl -s \"http://localhost:3000/?fresh=$\\(date +%s\\)\" -o /dev/null)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" --max-time 3 http://localhost:3000)"
+    ]
+  }
+}
