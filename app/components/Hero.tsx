@@ -21,7 +21,7 @@ export default function Hero() {
           <div className="absolute -inset-5 -z-10 rounded-[2.5rem] border border-[var(--lime)]/20" aria-hidden="true" />
           <div className="absolute inset-x-8 bottom-2 h-20 rounded-full bg-[#f05a3d]/30 blur-3xl" aria-hidden="true" />
           <div className="relative aspect-video overflow-hidden rounded-[2rem] border border-white/20 bg-[#24201f] shadow-2xl shadow-black/30">
-            <video className="pointer-events-none h-full w-full object-contain" autoPlay muted loop playsInline preload="metadata" poster="/abhinav-scene.jpeg" aria-label="Introduction video featuring Abhinav Kumar"><source src="/hero-video-clean.mp4" type="video/mp4" /></video>
+            <video className="pointer-events-none h-full w-full object-contain" autoPlay muted loop playsInline preload="metadata" poster="/hero-video-poster.jpg" aria-label="Introduction video featuring Abhinav Kumar"><source src="/hero-video-clean.mp4" type="video/mp4" /></video>
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#171514]/75 via-transparent to-transparent" aria-hidden="true" />
             <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between font-[family-name:var(--font-geist-mono)] text-[10px] uppercase tracking-[.16em] text-white/75"><span>Product manager</span><span>New Delhi, India</span></div>
           </div>
