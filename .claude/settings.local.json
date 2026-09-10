@@ -17,7 +17,15 @@
       "Bash(python \"C:\\\\Users\\\\BIPL\\\\abhinav-portfolio\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\src\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"rotating overlay animation continuous infinite\" --domain ux -n 6)",
       "Bash(python3 \"C:\\\\Users\\\\BIPL\\\\abhinav-portfolio\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\src\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"rotating shimmer overlay\" --domain ux -n 5)",
       "Bash(curl -s \"http://localhost:3000/?fresh=$\\(date +%s\\)\" -o /dev/null)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" --max-time 3 http://localhost:3000)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" --max-time 3 http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/hero-bg.mp4)",
+      "Bash(ffprobe -v error -select_streams v:0 -show_entries stream=width,height,duration -of csv=p=0:s=x public/hero-bg.mp4)",
+      "Bash(node -e ' *)",
+      "Bash(copy \"C:\\\\Users\\\\BIPL\\\\Desktop\\\\videomp_.mp4\" \"C:\\\\Users\\\\BIPL\\\\abhinav-portfolio\\\\public\\\\hero-bg.mp4\")",
+      "PowerShell(\\(Get-Item \"C:\\\\Users\\\\BIPL\\\\abhinav-portfolio\\\\public\\\\hero-bg.mp4\"\\).Length; \\(Get-Item \"C:\\\\Users\\\\BIPL\\\\Desktop\\\\videomp_.mp4\"\\).Length)",
+      "PowerShell(Get-Process -Name \"node\" -ErrorAction Stop)",
+      "PowerShell(Stop-Process -Force -Confirm:$false)",
+      "Bash(npx next *)"
     ]
   }
 }
