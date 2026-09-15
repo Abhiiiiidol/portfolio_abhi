@@ -25,7 +25,7 @@ export default function HeroCopy() {
     >
       <motion.span
         variants={item}
-        className="inline-flex w-fit items-center gap-2 rounded-full border border-[var(--lime)]/30 bg-[rgba(184,255,46,0.06)] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--lime)] backdrop-blur-sm"
+        className="inline-flex w-fit items-center gap-2 rounded-full border border-[var(--lime)]/30 bg-[rgba(217,80,53,0.06)] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--lime)] backdrop-blur-sm"
       >
         <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[var(--lime)]" />
         Available for new opportunities
@@ -43,7 +43,7 @@ export default function HeroCopy() {
           <span
             aria-hidden="true"
             className="absolute inset-0 -z-10 blur-2xl"
-            style={{ background: "rgba(184,255,46,0.25)" }}
+            style={{ background: "rgba(217,80,53,0.25)" }}
           />
         </span>
       </motion.h1>
@@ -71,7 +71,7 @@ export default function HeroCopy() {
         <a
           href="#work"
           className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-[var(--lime)] px-7 text-sm font-semibold text-[var(--cosmic-bg-deep)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
-          style={{ boxShadow: "0 0 32px rgba(184,255,46,0.4)" }}
+          style={{ boxShadow: "0 0 32px rgba(217,80,53,0.4)" }}
         >
           See my work
           <span aria-hidden="true" className="ml-2 transition-transform group-hover:translate-x-0.5">
@@ -80,7 +80,7 @@ export default function HeroCopy() {
         </a>
         <a
           href="#contact"
-          className="inline-flex h-12 items-center justify-center rounded-full border border-white/20 bg-white/[0.03] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/50 hover:bg-[rgba(184,255,46,0.06)]"
+          className="inline-flex h-12 items-center justify-center rounded-full border border-black/[0.08] bg-black/[0.02] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/50 hover:bg-[rgba(217,80,53,0.06)]"
         >
           Get in touch
         </a>

@@ -25,7 +25,9 @@
       "PowerShell(\\(Get-Item \"C:\\\\Users\\\\BIPL\\\\abhinav-portfolio\\\\public\\\\hero-bg.mp4\"\\).Length; \\(Get-Item \"C:\\\\Users\\\\BIPL\\\\Desktop\\\\videomp_.mp4\"\\).Length)",
       "PowerShell(Get-Process -Name \"node\" -ErrorAction Stop)",
       "PowerShell(Stop-Process -Force -Confirm:$false)",
-      "Bash(npx next *)"
+      "Bash(npx next *)",
+      "PowerShell(npm run build 2>&1)",
+      "PowerShell(npm run dev)"
     ]
   }
 }

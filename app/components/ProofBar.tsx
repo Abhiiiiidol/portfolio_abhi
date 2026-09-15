@@ -49,7 +49,7 @@ function CountUp({ value, suffix }: { value: number; suffix: string }) {
 
 export default function ProofBar() {
   return (
-    <section className="relative border-y border-white/5 bg-[var(--cosmic-surface)]">
+    <section className="relative border-y border-[var(--line)] bg-[var(--cosmic-surface)]">
       <div className="mx-auto grid max-w-[1440px] grid-cols-2 gap-6 px-6 py-10 md:grid-cols-4 md:gap-8 md:px-12 lg:px-16">
         {STATS.map((stat, i) => (
           <motion.div

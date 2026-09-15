@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_.95fr] lg:gap-16">
         <HeroCopy />
         <motion.div className="relative mx-auto w-full max-w-[640px] lg:mr-0" style={{ y: mediaY, rotate: mediaRotate, opacity: mediaOpacity }} initial={{ opacity: 0, scale: .94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, delay: .15, ease: [0.22, 1, 0.36, 1] }}>
-          <motion.div className="absolute -right-4 -top-4 z-20 rounded-full bg-[var(--lime)] px-4 py-2 font-[family-name:var(--font-geist-mono)] text-[10px] font-semibold uppercase tracking-[.16em] text-white shadow-lg" animate={{ y: [0, -7, 0] }} transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}>Available 2026</motion.div>
+          <motion.div className="absolute -right-4 -top-4 z-20 rounded-full bg-[var(--lime)] px-4 py-2 font-[family-name:var(--font-geist-mono)] text-[10px] font-semibold uppercase tracking-[.16em] text-white shadow-lg" animate={{ y: [0, -7, 0] }} transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}>Open to work</motion.div>
           <div className="absolute -inset-5 -z-10 rounded-[2.5rem] border border-[var(--lime)]/20" aria-hidden="true" />
           <div className="absolute inset-x-8 bottom-2 h-20 rounded-full bg-[#f05a3d]/30 blur-3xl" aria-hidden="true" />
           <div className="relative aspect-video overflow-hidden rounded-[2rem] border border-white/20 bg-[#24201f] shadow-2xl shadow-black/30">

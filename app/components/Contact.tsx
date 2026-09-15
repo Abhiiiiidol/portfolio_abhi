@@ -47,7 +47,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/in29abhinav/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 items-center gap-2 rounded-full border border-white/20 bg-white/[0.03] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/50 hover:bg-[rgba(184,255,46,0.06)]"
+                className="inline-flex h-12 items-center gap-2 rounded-full border border-black/[0.08] bg-black/[0.02] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/50 hover:bg-[rgba(217,80,53,0.06)]"
               >
                 <ExternalLink size={16} />
                 LinkedIn
@@ -57,7 +57,7 @@ export default function Contact() {
                 href="/Abhinav_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 items-center gap-2 rounded-full border border-white/20 bg-white/[0.03] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/50 hover:bg-[rgba(184,255,46,0.06)]"
+                className="inline-flex h-12 items-center gap-2 rounded-full border border-black/[0.08] bg-black/[0.02] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/50 hover:bg-[rgba(217,80,53,0.06)]"
               >
                 <Download size={16} />
                 Resume

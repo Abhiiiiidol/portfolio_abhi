@@ -74,7 +74,7 @@ export default function ProductThinking() {
               }}
             >
               <motion.div
-                className="group relative flex flex-col gap-3 border-l border-white/8 py-6 pl-6 md:border-l-0 md:border-t md:py-0 md:pl-0 md:pt-6"
+                className="group relative flex flex-col gap-3 border-l border-black/[0.06] py-6 pl-6 md:border-l-0 md:border-t md:py-0 md:pl-0 md:pt-6"
                 whileHover={{ x: 4 }}
                 transition={{ duration: 0.2 }}
               >
@@ -92,7 +92,7 @@ export default function ProductThinking() {
                     ease: [0.22, 1, 0.36, 1] as const,
                   }}
                   style={{
-                    boxShadow: "0 0 8px rgba(184,255,46,0.3)",
+                    boxShadow: "0 0 8px rgba(217,80,53,0.3)",
                   }}
                 />
                 <span className="font-[family-name:var(--font-geist-mono)] text-xs text-[var(--lime)] transition-all group-hover:text-[var(--lime-soft)]">

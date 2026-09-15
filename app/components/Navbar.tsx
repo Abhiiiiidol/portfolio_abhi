@@ -62,7 +62,7 @@ export default function Navbar() {
             href="/Abhinav_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-9 items-center rounded-full border border-[var(--lime)]/30 bg-[rgba(184,255,46,0.06)] px-5 text-sm font-medium text-[var(--lime)] transition-colors hover:bg-[rgba(184,255,46,0.12)]"
+            className="inline-flex h-9 items-center rounded-full border border-[var(--lime)]/30 bg-[rgba(217,80,53,0.06)] px-5 text-sm font-medium text-[var(--lime)] transition-colors hover:bg-[rgba(217,80,53,0.12)]"
           >
             Resume
           </a>
@@ -84,7 +84,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute inset-x-0 top-16 border-b border-white/5 bg-[var(--cosmic-bg)]/95 backdrop-blur-xl md:hidden"
+            className="absolute inset-x-0 top-16 border-b border-[var(--line)] bg-[var(--cosmic-bg)]/95 backdrop-blur-xl md:hidden"
           >
             <div className="flex flex-col gap-1 px-6 py-4">
               {NAV_LINKS.map((link) => (
@@ -92,7 +92,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-lg px-4 py-3 text-sm text-[var(--text-secondary)] transition-colors hover:bg-white/5 hover:text-[var(--lime)]"
+                  className="rounded-lg px-4 py-3 text-sm text-[var(--text-secondary)] transition-colors hover:bg-black/[0.03] hover:text-[var(--lime)]"
                 >
                   {link.label}
                 </a>
@@ -102,7 +102,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 inline-flex h-10 items-center justify-center rounded-full border border-[var(--lime)]/30 bg-[rgba(184,255,46,0.06)] text-sm font-medium text-[var(--lime)]"
+                className="mt-2 inline-flex h-10 items-center justify-center rounded-full border border-[var(--lime)]/30 bg-[rgba(217,80,53,0.06)] text-sm font-medium text-[var(--lime)]"
               >
                 Resume
               </a>

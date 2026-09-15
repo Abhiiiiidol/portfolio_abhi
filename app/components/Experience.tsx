@@ -56,9 +56,7 @@ export default function Experience() {
           {ROLES.map((role, i) => (
             <FadeIn key={role.company} delay={i * 0.15}>
               <div
-                className={`relative border-l-2 border-[var(--lime)]/20 py-8 pl-8 ${
-                  i < ROLES.length - 1 ? "" : ""
-                }`}
+                className="relative border-l-2 border-[var(--lime)]/20 py-8 pl-8"
               >
                 <div
                   className="absolute -left-[7px] top-10 h-3 w-3 rounded-full border-2 border-[var(--lime)] bg-[var(--cosmic-bg)]"

@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import FadeIn from "./FadeIn";
 
 type Project = {
@@ -71,7 +70,7 @@ export default function SelectedWork() {
               <motion.article
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
-                className="group relative overflow-hidden rounded-2xl border border-white/5 bg-[var(--cosmic-bg)] p-6 sm:p-8 lg:p-10"
+                className="group relative overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--cosmic-bg)] p-6 sm:p-8 lg:p-10"
               >
                 <div className="flex flex-col gap-6 lg:flex-row lg:gap-12">
                   <div className="flex flex-1 flex-col gap-4">
@@ -79,12 +78,8 @@ export default function SelectedWork() {
                       <span className="font-[family-name:var(--font-geist-mono)] text-xs text-[var(--text-muted)]">
                         {project.category}
                       </span>
-                      <h3 className="flex items-center gap-2 text-xl font-semibold text-[var(--text-primary)] lg:text-2xl">
+                      <h3 className="text-xl font-semibold text-[var(--text-primary)] lg:text-2xl">
                         {project.title}
-                        <ArrowUpRight
-                          size={18}
-                          className="text-[var(--lime)] opacity-0 transition-opacity group-hover:opacity-100"
-                        />
                       </h3>
                     </div>
 
@@ -111,7 +106,7 @@ export default function SelectedWork() {
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-full border border-white/8 bg-white/[0.03] px-3 py-1 text-xs text-[var(--text-muted)]"
+                          className="rounded-full border border-black/[0.06] bg-black/[0.02] px-3 py-1 text-xs text-[var(--text-muted)]"
                         >
                           {tag}
                         </span>
@@ -121,7 +116,7 @@ export default function SelectedWork() {
 
                   {project.metric && (
                     <div className="flex shrink-0 items-center lg:w-[220px]">
-                      <div className="w-full rounded-xl border border-[var(--lime)]/10 bg-[rgba(184,255,46,0.03)] px-5 py-5">
+                      <div className="w-full rounded-xl border border-[var(--lime)]/10 bg-[rgba(217,80,53,0.03)] px-5 py-5">
                         <span className="text-xs uppercase tracking-wider text-[var(--text-muted)]">
                           Impact
                         </span>
@@ -136,7 +131,7 @@ export default function SelectedWork() {
                 <div
                   aria-hidden="true"
                   className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity group-hover:opacity-100"
-                  style={{ background: "rgba(184,255,46,0.06)" }}
+                  style={{ background: "rgba(217,80,53,0.06)" }}
                 />
               </motion.article>
             </FadeIn>
