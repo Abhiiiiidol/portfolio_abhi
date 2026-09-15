@@ -10,7 +10,7 @@ type Stat = {
 };
 
 const STATS: Stat[] = [
-  { value: 5, suffix: "+", label: "Years in Product" },
+  { value: 2, suffix: "+", label: "Years in Product" },
   { value: 4, suffix: "", label: "Industry Domains" },
   { value: 40, suffix: "%", label: "DAU Growth Delivered" },
   { value: 500, suffix: "+", label: "Users Impacted" },

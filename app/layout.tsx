@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Abhinav Kumar — Product Manager",
   description:
-    "Product Manager with 5+ years shipping across FinTech, Healthcare, E-Commerce, and Logistics. I pair deep user empathy with sharp product strategy to turn ambiguity into roadmaps that ship.",
+    "Product Manager with 2+ years shipping across FinTech, Healthcare, E-Commerce, and Logistics. I pair deep user empathy with sharp product strategy to turn ambiguity into roadmaps that ship.",
   keywords: [
     "Product Manager",
     "Abhinav Kumar",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Abhinav Kumar — Product Manager",
     description:
-      "Product Manager with 5+ years shipping across FinTech, Healthcare, E-Commerce, and Logistics.",
+      "Product Manager with 2+ years shipping across FinTech, Healthcare, E-Commerce, and Logistics.",
     type: "website",
   },
 };

@@ -60,7 +60,7 @@ export default function HeroCopy() {
         className="max-w-xl text-base leading-relaxed text-[var(--text-secondary)] sm:text-[17px]"
       >
         Product Manager with{" "}
-        <span className="text-[var(--text-primary)]">5+ years</span> shipping across
+        <span className="text-[var(--text-primary)]">2+ years</span> shipping across
         FinTech, Healthcare, E-Commerce, and Logistics. I pair deep{" "}
         <span className="text-[var(--lime)]">user empathy</span> with sharp{" "}
         <span className="text-[var(--lime)]">product strategy</span> to turn ambiguity
