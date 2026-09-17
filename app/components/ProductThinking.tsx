@@ -79,12 +79,9 @@ export default function ProductThinking() {
                 transition={{ duration: 0.2 }}
               >
                 <motion.div
-                  className="absolute -left-px top-0 h-0 w-px bg-[var(--lime)] md:-top-px md:left-0 md:h-px md:w-0"
-                  initial={{ height: 0, width: 0 }}
-                  whileInView={{
-                    height: "100%",
-                    width: "100%",
-                  }}
+                  className="absolute -left-px top-0 h-full w-px bg-[var(--lime)] md:-top-px md:left-0 md:h-px md:w-full"
+                  initial={{ scaleX: 0, scaleY: 0 }}
+                  whileInView={{ scaleX: 1, scaleY: 1 }}
                   viewport={{ once: true }}
                   transition={{
                     duration: 0.8,
@@ -92,6 +89,7 @@ export default function ProductThinking() {
                     ease: [0.22, 1, 0.36, 1] as const,
                   }}
                   style={{
+                    transformOrigin: "top left",
                     boxShadow: "0 0 8px rgba(217,80,53,0.3)",
                   }}
                 />

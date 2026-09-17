@@ -14,22 +14,22 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    title: "Payment Gateway & Connected Banking",
+    title: "Smart Reconciliation & Connected Banking",
     category: "FinTech · BUSY InfoTech",
     problem:
-      "Businesses on BUSY faced fragmented payment flows with high friction — leading to drop-offs and manual settlement across multiple banking partners.",
+      "Users on a platform serving 4.6 lakh+ active businesses faced fragmented payment flows, manual reconciliation, and drop-offs across multiple banking partners.",
     outcome:
-      "Built an in-product payment gateway with connected banking (ICICI, Axis, HDFC). Defined API contracts and user flows from 162-user research.",
-    metric: "50% reduction in payment friction",
-    tags: ["User Research", "API Design", "Banking Integration", "HLD/LLD"],
+      "Built an AI-powered smart reconciliation feature blended with connected banking (ICICI, Axis, HDFC). Validated pain points through 162-user discovery research.",
+    metric: "40% fewer drop-offs",
+    tags: ["User Research", "AI/ML", "Banking Integration", "Connected Banking"],
   },
   {
     title: "PM-Mem: AI Chat Memory for PMs",
     category: "AI Product · Side Project",
     problem:
-      "Product Managers lose critical context across ChatGPT, Claude, Perplexity, and Gemini sessions — research threads die between conversations.",
+      "Product Managers lose critical context across ChatGPT, Claude, Perplexity, and Gemini sessions — research, chats, and decisions die when sessions close.",
     outcome:
-      "Built a privacy-first memory layer that captures conversations with user consent. Export as Markdown or auto-summarize to keep research alive.",
+      "Built a privacy-first memory layer that captures conversations with explicit user consent. Export as Markdown or auto-summarize to keep research threads alive across context windows.",
     metric: "Cross-platform memory",
     tags: ["LLMs", "Privacy-First", "Developer Tool", "RAG"],
   },
@@ -39,9 +39,9 @@ const PROJECTS: Project[] = [
     problem:
       "Finding available blood donors is time-critical and chaotic — no real-time visibility into blood-type availability nearby.",
     outcome:
-      "Built a web platform surfacing real-time blood-type availability within 50 km. Ran A/B tests on redesigned UI.",
+      "Built a consumer web platform surfacing real-time blood-type availability within 50 km, with user auth, interactive posts, and live database updates. Ran A/B testing on redesigned UI in Figma.",
     metric: "15% better task completion · 22% fewer bugs",
-    tags: ["A/B Testing", "Real-Time Data", "User-Centered Design"],
+    tags: ["A/B Testing", "Real-Time Data", "Figma", "User-Centered Design"],
   },
 ];
 

@@ -17,10 +17,10 @@ const ROLES: Role[] = [
     title: "Associate Product Manager",
     period: "Jan 2026 — Present",
     highlights: [
-      "Owned end-to-end build of in-product payment gateway — mapped user flow through 162-user research, defined HLD for a secure, scalable checkout.",
-      "Led connected-banking integration with ICICI, Axis, and HDFC — defined API contracts and LLD, cutting payment friction by 50%.",
-      "Co-built \"Busy Magic,\" an AI-powered platform initiative — drove 40% higher adoption and 30% reduction in user friction.",
-      "Drove YPay payment-collection and Easy Ecomm merchant billing integrations across Shopify, Amazon, Flipkart, and Meesho.",
+      "Owned a 0→1 product end-to-end on a platform serving 4.6 lakh+ active users — mapped user flows, identified friction points, and shipped iterative releases to accelerate time-to-market.",
+      "Built an AI-powered smart reconciliation feature blended with connected banking (ICICI, Axis, HDFC), enabling in-app transaction reconciliation — increased retention and reduced drop-offs by 40%.",
+      "Ran direct discovery with 162 users to validate inventory and payment pain points, prioritized the right fixes, and closed the loop on surfaced issues.",
+      "Co-built \"Busy Magic,\" an AI-powered platform initiative with corporate-banking integrations — drove 40% higher adoption and 30% reduction in user friction.",
     ],
   },
   {
@@ -28,10 +28,10 @@ const ROLES: Role[] = [
     title: "Associate Product Manager",
     period: "Jun 2025 — Jan 2026",
     highlights: [
-      "Built product-health dashboards using Mixpanel and Power BI — shipped targeted fixes that lifted DAU by 40% and MAU by 20%.",
-      "Led Tata 1mg 3P integration for blood-test bookings — defined cross-platform user flow.",
-      "Built an AI agent to automate contact extraction for BD teams, improving efficiency by ~30%.",
-      "Defined GTM strategy with marketing and sales, sharpening product-market fit — 500+ global users.",
+      "Drove product strategy for a B2C healthcare app used by 500+ users globally — designed a personalised provider recommendation system, lifting engagement and retention by 25%.",
+      "Built an AI agent to automate contact extraction for BD teams, improving operational efficiency by ~30%.",
+      "Used analytics and feedback tools to isolate top drop-off points in the consumer journey — partnered with design, tech, and QA to ship MVPs.",
+      "Drove product roadmap through market and competitor research, delivering PRDs and GTM strategy — achieved 20% lift in user interest.",
     ],
   },
 ];
