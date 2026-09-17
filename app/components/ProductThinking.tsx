@@ -79,19 +79,28 @@ export default function ProductThinking() {
                 transition={{ duration: 0.2 }}
               >
                 <motion.div
-                  className="absolute -left-px top-0 h-full w-px bg-[var(--lime)] md:-top-px md:left-0 md:h-px md:w-full"
-                  initial={{ scaleX: 0, scaleY: 0 }}
-                  whileInView={{ scaleX: 1, scaleY: 1 }}
+                  className="absolute -left-px top-0 h-full w-px bg-[var(--lime)] md:hidden"
+                  initial={{ scaleY: 0 }}
+                  whileInView={{ scaleY: 1 }}
                   viewport={{ once: true }}
                   transition={{
                     duration: 0.8,
                     delay: i * 0.15 + 0.3,
                     ease: [0.22, 1, 0.36, 1] as const,
                   }}
-                  style={{
-                    transformOrigin: "top left",
-                    boxShadow: "0 0 8px rgba(217,80,53,0.3)",
+                  style={{ transformOrigin: "top" }}
+                />
+                <motion.div
+                  className="absolute -top-px left-0 hidden h-px w-full bg-[var(--lime)] md:block"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.8,
+                    delay: i * 0.15 + 0.3,
+                    ease: [0.22, 1, 0.36, 1] as const,
                   }}
+                  style={{ transformOrigin: "left" }}
                 />
                 <span className="font-[family-name:var(--font-geist-mono)] text-xs text-[var(--lime)] transition-all group-hover:text-[var(--lime-soft)]">
                   {step.number}
