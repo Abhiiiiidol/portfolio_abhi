@@ -90,7 +90,7 @@ export default function About() {
                 {CERTS.map((cert) => (
                   <span
                     key={cert}
-                    className="rounded-full border border-[var(--line)] bg-[var(--surface-hover)] px-3 py-1 text-xs text-[var(--text-muted)]"
+                    className="rounded-full border border-[var(--accent-warm)]/20 bg-[var(--accent-warm)]/5 px-3 py-1 text-xs text-[var(--text-secondary)]"
                   >
                     {cert}
                   </span>

@@ -59,7 +59,7 @@ export default function Experience() {
                 className="relative border-l-2 border-[var(--lime)]/20 py-8 pl-8"
               >
                 <div
-                  className="absolute -left-[7px] top-10 h-3 w-3 rounded-full border-2 border-[var(--lime)] bg-[var(--cosmic-bg)]"
+                  className="absolute -left-[7px] top-10 h-3 w-3 rounded-full border-2 border-[var(--accent-2)] bg-[var(--cosmic-bg)]"
                 />
 
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">

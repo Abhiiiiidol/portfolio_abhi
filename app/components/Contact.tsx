@@ -36,7 +36,7 @@ export default function Contact() {
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row">
               <a
                 href="mailto:rajputabhinav1245@gmail.com"
-                className="group inline-flex h-12 items-center gap-2 rounded-full bg-[var(--lime)] px-7 text-sm font-semibold text-[var(--cosmic-bg-deep)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                className="group inline-flex h-12 items-center gap-2 rounded-full bg-gradient-to-r from-[var(--lime-deep)] via-[var(--lime)] to-[var(--accent-3)] px-7 text-sm font-semibold text-white transition-transform hover:scale-[1.02] active:scale-[0.98]"
                 style={{ boxShadow: "0 14px 28px rgba(var(--accent-rgb),0.22)" }}
               >
                 <Mail size={16} />

@@ -27,7 +27,7 @@ export default function HeroCopy() {
         variants={item}
         className="inline-flex w-fit items-center gap-2 rounded-full border border-[var(--lime)]/30 bg-[rgba(var(--accent-rgb),0.06)] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--lime)] backdrop-blur-sm"
       >
-        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[var(--lime)]" />
+        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[var(--accent-warm)]" />
         Available for new opportunities
       </motion.span>
 
@@ -37,7 +37,7 @@ export default function HeroCopy() {
       >
         Hi, I&apos;m{" "}
         <span className="relative inline-block">
-          <span className="bg-gradient-to-r from-[var(--lime)] via-[var(--lime-soft)] to-[var(--lime)] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[var(--lime)] via-[var(--accent-3)] to-[var(--accent-2)] bg-clip-text text-transparent">
             Abhinav
           </span>
           <span
@@ -70,7 +70,7 @@ export default function HeroCopy() {
       <motion.div variants={item} className="flex flex-wrap items-center gap-3 pt-2">
         <a
           href="#work"
-          className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-[var(--lime)] px-7 text-sm font-semibold text-[var(--cosmic-bg-deep)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
+          className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-[var(--lime-deep)] via-[var(--lime)] to-[var(--accent-3)] px-7 text-sm font-semibold text-white transition-transform hover:scale-[1.02] active:scale-[0.98]"
           style={{ boxShadow: "0 0 32px rgba(var(--accent-rgb),0.4)" }}
         >
           See my work

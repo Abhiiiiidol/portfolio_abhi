@@ -64,7 +64,7 @@ export default function ProofBar() {
             }}
             className="flex flex-col gap-1"
           >
-            <span className="font-[family-name:var(--font-geist-mono)] text-3xl font-semibold text-[var(--lime)] md:text-4xl">
+            <span className="font-[family-name:var(--font-geist-mono)] text-3xl font-semibold text-[var(--accent-2)] md:text-4xl">
               <CountUp value={stat.value} suffix={stat.suffix} />
             </span>
             <span className="text-sm text-[var(--text-muted)]">

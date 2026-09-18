@@ -120,7 +120,7 @@ export default function SelectedWork() {
                         <span className="text-xs uppercase tracking-wider text-[var(--text-muted)]">
                           Impact
                         </span>
-                        <p className="mt-2 font-[family-name:var(--font-geist-mono)] text-lg font-semibold text-[var(--lime)]">
+                        <p className="mt-2 font-[family-name:var(--font-geist-mono)] text-lg font-semibold text-[var(--accent-2)]">
                           {project.metric}
                         </p>
                       </div>
