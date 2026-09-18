@@ -10,10 +10,14 @@ import Toolkit from "./components/Toolkit";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ThemeSwitcher from "./components/ThemeSwitcher";
+import SmoothScroll from "./components/SmoothScroll";
+import CustomCursor from "./components/CustomCursor";
 
 export default function Home() {
   return (
     <>
+      <SmoothScroll />
+      <CustomCursor />
       <ScrollProgress />
       <Navbar />
       <main className="flex flex-1 flex-col">

@@ -1,6 +1,9 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
+import TextScramble from "../TextScramble";
+import RotatingText from "../RotatingText";
+import MagneticButton from "../MagneticButton";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -38,7 +41,7 @@ export default function HeroCopy() {
         Hi, I&apos;m{" "}
         <span className="relative inline-block">
           <span className="bg-gradient-to-r from-[var(--lime)] via-[var(--accent-3)] to-[var(--accent-2)] bg-clip-text text-transparent">
-            Abhinav
+            <TextScramble text="Abhinav" delay={600} />
           </span>
           <span
             aria-hidden="true"
@@ -50,9 +53,9 @@ export default function HeroCopy() {
 
       <motion.h2
         variants={item}
-        className="text-2xl font-medium leading-tight text-[var(--text-secondary)] sm:text-3xl"
+        className="min-h-[2.4em] text-2xl font-medium leading-tight text-[var(--text-secondary)] sm:min-h-[1.4em] sm:text-3xl"
       >
-        I build products people love.
+        <RotatingText />
       </motion.h2>
 
       <motion.p
@@ -68,22 +71,26 @@ export default function HeroCopy() {
       </motion.p>
 
       <motion.div variants={item} className="flex flex-wrap items-center gap-3 pt-2">
-        <a
-          href="#work"
-          className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-[var(--lime-deep)] via-[var(--lime)] to-[var(--accent-3)] px-7 text-sm font-semibold text-white transition-transform hover:scale-[1.02] active:scale-[0.98]"
-          style={{ boxShadow: "0 0 32px rgba(var(--accent-rgb),0.4)" }}
-        >
-          See my work
-          <span aria-hidden="true" className="ml-2 transition-transform group-hover:translate-x-0.5">
-            →
-          </span>
-        </a>
-        <a
-          href="#contact"
-          className="inline-flex h-12 items-center justify-center rounded-full border border-[var(--line)] bg-[var(--surface-hover)] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/50 hover:bg-[rgba(var(--accent-rgb),0.06)]"
-        >
-          Get in touch
-        </a>
+        <MagneticButton strength={0.3} data-magnetic>
+          <a
+            href="#work"
+            className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-[var(--lime-deep)] via-[var(--lime)] to-[var(--accent-3)] px-7 text-sm font-semibold text-white transition-transform hover:scale-[1.02] active:scale-[0.98]"
+            style={{ boxShadow: "0 0 32px rgba(var(--accent-rgb),0.4)" }}
+          >
+            See my work
+            <span aria-hidden="true" className="ml-2 transition-transform group-hover:translate-x-0.5">
+              →
+            </span>
+          </a>
+        </MagneticButton>
+        <MagneticButton strength={0.3} data-magnetic>
+          <a
+            href="#contact"
+            className="inline-flex h-12 items-center justify-center rounded-full border border-[var(--line)] bg-[var(--surface-hover)] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/50 hover:bg-[rgba(var(--accent-rgb),0.06)]"
+          >
+            Get in touch
+          </a>
+        </MagneticButton>
       </motion.div>
     </motion.div>
   );

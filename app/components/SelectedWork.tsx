@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import FadeIn from "./FadeIn";
+import TiltCard from "./TiltCard";
 
 type Project = {
   title: string;
@@ -67,6 +68,7 @@ export default function SelectedWork() {
         <div className="mt-14 flex flex-col gap-6">
           {PROJECTS.map((project, i) => (
             <FadeIn key={project.title} delay={i * 0.12}>
+              <TiltCard className="relative">
               <motion.article
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
@@ -134,6 +136,7 @@ export default function SelectedWork() {
                   style={{ background: "rgba(var(--accent-rgb),0.06)" }}
                 />
               </motion.article>
+              </TiltCard>
             </FadeIn>
           ))}
         </div>
