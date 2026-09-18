@@ -62,7 +62,7 @@ export default function Navbar() {
             href="/Abhinav_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-9 items-center rounded-full border border-[var(--lime)]/30 bg-[rgba(217,80,53,0.06)] px-5 text-sm font-medium text-[var(--lime)] transition-colors hover:bg-[rgba(217,80,53,0.12)]"
+            className="inline-flex h-9 items-center rounded-full border border-[var(--lime)]/30 bg-[rgba(var(--accent-rgb),0.06)] px-5 text-sm font-medium text-[var(--lime)] transition-colors hover:bg-[rgba(var(--accent-rgb),0.12)]"
           >
             Resume
           </a>
@@ -92,7 +92,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-lg px-4 py-3 text-sm text-[var(--text-secondary)] transition-colors hover:bg-black/[0.03] hover:text-[var(--lime)]"
+                  className="rounded-lg px-4 py-3 text-sm text-[var(--text-secondary)] transition-colors hover:bg-[var(--surface-hover)] hover:text-[var(--lime)]"
                 >
                   {link.label}
                 </a>
@@ -102,7 +102,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 inline-flex h-10 items-center justify-center rounded-full border border-[var(--lime)]/30 bg-[rgba(217,80,53,0.06)] text-sm font-medium text-[var(--lime)]"
+                className="mt-2 inline-flex h-10 items-center justify-center rounded-full border border-[var(--lime)]/30 bg-[rgba(var(--accent-rgb),0.06)] text-sm font-medium text-[var(--lime)]"
               >
                 Resume
               </a>

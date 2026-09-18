@@ -14,6 +14,8 @@
   --ink-muted: #615d57;
   --ink-soft: #8b857d;
   --line: rgba(23, 21, 20, .13);
+  --accent-rgb: 217, 80, 53;
+  --surface-hover: rgba(0,0,0,0.02);
 }
 
 @theme inline {
@@ -26,6 +28,7 @@
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
+  --color-surface-hover: var(--surface-hover);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -43,16 +46,16 @@ body {
 }
 
 body {
-  background-image: radial-gradient(circle at 92% 4%, rgba(217, 80, 53, .10), transparent 23%);
+  background-image: radial-gradient(circle at 92% 4%, rgba(var(--accent-rgb), .10), transparent 23%);
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-::selection { background: #d95035; color: white; }
+::selection { background: var(--lime); color: white; }
 .eyebrow { color: var(--lime); font-family: var(--font-geist-mono); font-size: .68rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
 .button-primary, .button-secondary { align-items: center; border-radius: 9999px; display: inline-flex; font-size: .875rem; font-weight: 600; gap: .5rem; height: 3rem; padding: 0 1.3rem; transition: transform .2s ease, background-color .2s ease; }
 .button-primary { background: var(--ink); color: #fff; }.button-primary:hover { background: var(--lime); transform: translateY(-2px); }.button-secondary { border: 1px solid var(--line); color: var(--ink); }.button-secondary:hover { border-color: var(--ink); transform: translateY(-2px); }
-.hero-orb { border-radius: 9999px; filter: blur(2px); pointer-events: none; position: absolute; }.hero-orb-one { background: rgba(217,80,53,0.10); height: 22rem; right: -9rem; top: 2rem; width: 22rem; }.hero-orb-two { background: rgba(239,118,93,0.08); bottom: -8rem; height: 16rem; left: -7rem; width: 16rem; }
+.hero-orb { border-radius: 9999px; filter: blur(2px); pointer-events: none; position: absolute; }.hero-orb-one { background: rgba(var(--accent-rgb),0.10); height: 22rem; right: -9rem; top: 2rem; width: 22rem; }.hero-orb-two { background: rgba(var(--accent-rgb),0.06); bottom: -8rem; height: 16rem; left: -7rem; width: 16rem; }
 .animate-enter { animation: enter .6s cubic-bezier(.22,1,.36,1) both; } @keyframes enter { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (prefers-reduced-motion: reduce) {

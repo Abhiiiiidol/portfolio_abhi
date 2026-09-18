@@ -74,7 +74,7 @@ export default function ProductThinking() {
               }}
             >
               <motion.div
-                className="group relative flex flex-col gap-3 border-l border-black/[0.06] py-6 pl-6 md:border-l-0 md:border-t md:py-0 md:pl-0 md:pt-6"
+                className="group relative flex flex-col gap-3 border-l border-[var(--line)] py-6 pl-6 md:border-l-0 md:border-t md:py-0 md:pl-0 md:pt-6"
                 whileHover={{ x: 4 }}
                 transition={{ duration: 0.2 }}
               >

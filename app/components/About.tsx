@@ -33,14 +33,14 @@ export default function About() {
             <div
               className="absolute inset-0 rounded-2xl"
               style={{
-                boxShadow: "inset 0 0 0 1px rgba(217,80,53,0.15)",
+                boxShadow: "inset 0 0 0 1px rgba(var(--accent-rgb),0.15)",
               }}
             />
           </motion.div>
           <div
             aria-hidden="true"
             className="absolute -inset-4 -z-10 rounded-3xl opacity-30 blur-3xl"
-            style={{ background: "rgba(217,80,53,0.08)" }}
+            style={{ background: "rgba(var(--accent-rgb),0.08)" }}
           />
         </FadeIn>
 
@@ -90,7 +90,7 @@ export default function About() {
                 {CERTS.map((cert) => (
                   <span
                     key={cert}
-                    className="rounded-full border border-black/[0.06] bg-black/[0.02] px-3 py-1 text-xs text-[var(--text-muted)]"
+                    className="rounded-full border border-[var(--line)] bg-[var(--surface-hover)] px-3 py-1 text-xs text-[var(--text-muted)]"
                   >
                     {cert}
                   </span>

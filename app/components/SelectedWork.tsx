@@ -106,7 +106,7 @@ export default function SelectedWork() {
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-full border border-black/[0.06] bg-black/[0.02] px-3 py-1 text-xs text-[var(--text-muted)]"
+                          className="rounded-full border border-[var(--line)] bg-[var(--surface-hover)] px-3 py-1 text-xs text-[var(--text-muted)]"
                         >
                           {tag}
                         </span>
@@ -116,7 +116,7 @@ export default function SelectedWork() {
 
                   {project.metric && (
                     <div className="flex shrink-0 items-center lg:w-[220px]">
-                      <div className="w-full rounded-xl border border-[var(--lime)]/10 bg-[rgba(217,80,53,0.03)] px-5 py-5">
+                      <div className="w-full rounded-xl border border-[var(--lime)]/10 bg-[rgba(var(--accent-rgb),0.03)] px-5 py-5">
                         <span className="text-xs uppercase tracking-wider text-[var(--text-muted)]">
                           Impact
                         </span>
@@ -131,7 +131,7 @@ export default function SelectedWork() {
                 <div
                   aria-hidden="true"
                   className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity group-hover:opacity-100"
-                  style={{ background: "rgba(217,80,53,0.06)" }}
+                  style={{ background: "rgba(var(--accent-rgb),0.06)" }}
                 />
               </motion.article>
             </FadeIn>

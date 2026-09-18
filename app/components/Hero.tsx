@@ -19,7 +19,7 @@ export default function Hero() {
         <motion.div className="relative mx-auto w-full max-w-[640px] lg:mr-0" style={{ y: mediaY, rotate: mediaRotate, opacity: mediaOpacity }} initial={{ opacity: 0, scale: .94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, delay: .15, ease: [0.22, 1, 0.36, 1] }}>
 
           <div className="absolute -inset-5 -z-10 rounded-[2.5rem] border border-[var(--lime)]/20" aria-hidden="true" />
-          <div className="absolute inset-x-8 bottom-2 h-20 rounded-full bg-[#f05a3d]/30 blur-3xl" aria-hidden="true" />
+          <div className="absolute inset-x-8 bottom-2 h-20 rounded-full bg-[rgb(var(--accent-rgb))]/30 blur-3xl" aria-hidden="true" />
           <div className="relative aspect-video overflow-hidden rounded-[2rem] border border-white/20 bg-[#24201f] shadow-2xl shadow-black/30">
             <video className="pointer-events-none h-full w-full object-contain" autoPlay muted loop playsInline preload="metadata" poster="/hero-video-poster.jpg" aria-label="Introduction video featuring Abhinav Kumar"><source src="/hero-video-clean.mp4" type="video/mp4" /></video>
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#171514]/75 via-transparent to-transparent" aria-hidden="true" />

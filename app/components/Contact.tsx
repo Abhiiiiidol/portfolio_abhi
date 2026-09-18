@@ -37,7 +37,7 @@ export default function Contact() {
               <a
                 href="mailto:rajputabhinav1245@gmail.com"
                 className="group inline-flex h-12 items-center gap-2 rounded-full bg-[var(--lime)] px-7 text-sm font-semibold text-[var(--cosmic-bg-deep)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
-                style={{ boxShadow: "0 14px 28px rgba(217,80,53,0.22)" }}
+                style={{ boxShadow: "0 14px 28px rgba(var(--accent-rgb),0.22)" }}
               >
                 <Mail size={16} />
                 Email me
@@ -47,7 +47,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/in29abhinav/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 items-center gap-2 rounded-full border border-black/[0.08] bg-black/[0.02] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/50 hover:bg-[rgba(217,80,53,0.06)]"
+                className="inline-flex h-12 items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-hover)] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/50 hover:bg-[rgba(var(--accent-rgb),0.06)]"
               >
                 <ExternalLink size={16} />
                 LinkedIn
@@ -57,7 +57,7 @@ export default function Contact() {
                 href="/Abhinav_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 items-center gap-2 rounded-full border border-black/[0.08] bg-black/[0.02] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/50 hover:bg-[rgba(217,80,53,0.06)]"
+                className="inline-flex h-12 items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-hover)] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/50 hover:bg-[rgba(var(--accent-rgb),0.06)]"
               >
                 <Download size={16} />
                 Resume

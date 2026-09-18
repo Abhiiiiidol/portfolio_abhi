@@ -106,11 +106,11 @@ export default function Toolkit() {
                       custom={i}
                       variants={pillVariants}
                       whileHover={{
-                        borderColor: "rgba(217,80,53,0.3)",
+                        borderColor: "rgba(var(--accent-rgb),0.3)",
                         color: "var(--text-primary)",
-                        boxShadow: "0 0 12px rgba(217,80,53,0.1)",
+                        boxShadow: "0 0 12px rgba(var(--accent-rgb),0.1)",
                       }}
-                      className="cursor-default rounded-full border border-black/[0.06] bg-black/[0.02] px-3.5 py-1.5 text-sm text-[var(--text-secondary)] transition-colors"
+                      className="cursor-default rounded-full border border-[var(--line)] bg-[var(--surface-hover)] px-3.5 py-1.5 text-sm text-[var(--text-secondary)] transition-colors"
                     >
                       {skill}
                     </motion.span>

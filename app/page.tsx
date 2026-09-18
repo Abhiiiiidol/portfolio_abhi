@@ -9,6 +9,7 @@ import ProductThinking from "./components/ProductThinking";
 import Toolkit from "./components/Toolkit";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import ThemeSwitcher from "./components/ThemeSwitcher";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <ThemeSwitcher />
     </>
   );
 }
