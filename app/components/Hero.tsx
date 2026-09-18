@@ -18,13 +18,9 @@ export default function Hero() {
         <HeroCopy />
         <motion.div className="relative mx-auto w-full max-w-[640px] lg:mr-0" style={{ y: mediaY, rotate: mediaRotate, opacity: mediaOpacity }} initial={{ opacity: 0, scale: .94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, delay: .15, ease: [0.22, 1, 0.36, 1] }}>
 
-          <div className="absolute -inset-10 rounded-full bg-[rgb(var(--accent-rgb))]/10 blur-[80px]" aria-hidden="true" />
-          <div className="relative aspect-video overflow-hidden rounded-3xl">
-            <video className="pointer-events-none h-full w-full scale-105 object-cover" autoPlay muted loop playsInline preload="metadata" poster="/hero-video-poster.jpg" aria-label="Introduction video featuring Abhinav Kumar"><source src="/hero-video-clean.mp4" type="video/mp4" /></video>
-            <div className="pointer-events-none absolute inset-0" aria-hidden="true" style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, transparent 40%, var(--cosmic-bg) 100%)" }} />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--cosmic-bg)] via-transparent to-[var(--cosmic-bg)]/40" aria-hidden="true" />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--cosmic-bg)]/50 via-transparent to-[var(--cosmic-bg)]/50" aria-hidden="true" />
-            <div className="absolute bottom-5 left-6 right-6 flex items-end justify-between font-[family-name:var(--font-geist-mono)] text-[10px] uppercase tracking-[.16em] text-white/50"><span>Product manager</span><span>New Delhi, India</span></div>
+          <div className="relative aspect-video bg-[var(--cosmic-bg)]">
+            <video className="pointer-events-none h-full w-full object-contain" autoPlay muted loop playsInline preload="metadata" poster="/hero-video-poster.jpg" aria-label="Introduction video featuring Abhinav Kumar"><source src="/hero-video-clean.mp4" type="video/mp4" /></video>
+            <div className="absolute bottom-4 left-6 right-6 flex items-end justify-between font-[family-name:var(--font-geist-mono)] text-[10px] uppercase tracking-[.16em] text-white/50"><span>Product manager</span><span>New Delhi, India</span></div>
           </div>
         </motion.div>
       </div>
