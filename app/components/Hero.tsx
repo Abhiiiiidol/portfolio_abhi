@@ -18,12 +18,20 @@ export default function Hero() {
         <HeroCopy />
         <motion.div className="relative mx-auto w-full max-w-[640px] lg:mr-0" style={{ y: mediaY, rotate: mediaRotate, opacity: mediaOpacity }} initial={{ opacity: 0, scale: .94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, delay: .15, ease: [0.22, 1, 0.36, 1] }}>
 
-          <div className="absolute -inset-5 -z-10 rounded-[2.5rem] border border-[var(--lime)]/20" aria-hidden="true" />
-          <div className="absolute inset-x-8 bottom-2 h-20 rounded-full bg-[rgb(var(--accent-rgb))]/30 blur-3xl" aria-hidden="true" />
-          <div className="relative aspect-video overflow-hidden rounded-[2rem] border border-white/20 bg-[#24201f] shadow-2xl shadow-black/30">
-            <video className="pointer-events-none h-full w-full object-contain" autoPlay muted loop playsInline preload="metadata" poster="/hero-video-poster.jpg" aria-label="Introduction video featuring Abhinav Kumar"><source src="/hero-video-clean.mp4" type="video/mp4" /></video>
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#171514]/75 via-transparent to-transparent" aria-hidden="true" />
-            <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between font-[family-name:var(--font-geist-mono)] text-[10px] uppercase tracking-[.16em] text-white/75"><span>Product manager</span><span>New Delhi, India</span></div>
+          <div className="absolute inset-x-8 -bottom-2 h-24 rounded-full bg-[rgb(var(--accent-rgb))]/20 blur-3xl" aria-hidden="true" />
+          <div className="relative overflow-hidden rounded-xl border border-white/[0.08] bg-[#1a1a1a] shadow-2xl shadow-black/50" style={{ boxShadow: "0 25px 50px -12px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05) inset" }}>
+            <div className="flex items-center gap-2 border-b border-white/[0.06] bg-[#161616] px-4 py-3">
+              <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
+              <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
+              <span className="h-3 w-3 rounded-full bg-[#28c840]" />
+              <span className="ml-auto font-[family-name:var(--font-geist-mono)] text-[10px] tracking-wider text-white/30">abhinav.dev</span>
+            </div>
+            <div className="relative aspect-video">
+              <video className="pointer-events-none h-full w-full object-cover" autoPlay muted loop playsInline preload="metadata" poster="/hero-video-poster.jpg" aria-label="Introduction video featuring Abhinav Kumar"><source src="/hero-video-clean.mp4" type="video/mp4" /></video>
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/60 via-transparent to-transparent" aria-hidden="true" />
+              <div className="pointer-events-none absolute inset-0 rounded-[inherit]" style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.04)" }} aria-hidden="true" />
+              <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between font-[family-name:var(--font-geist-mono)] text-[10px] uppercase tracking-[.16em] text-white/60"><span>Product manager</span><span>New Delhi, India</span></div>
+            </div>
           </div>
         </motion.div>
       </div>
