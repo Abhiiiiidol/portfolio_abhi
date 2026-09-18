@@ -2,11 +2,22 @@
 
 import { useState } from "react";
 
-const THEMES = [
+type Theme = {
+  id: string;
+  label: string;
+  desc: string;
+  dot: string;
+  dark: boolean;
+  vars: Record<string, string>;
+};
+
+const THEMES: Theme[] = [
   {
     id: "light",
     label: "Light",
+    desc: "Current",
     dot: "#d95035",
+    dark: false,
     vars: {
       "--cosmic-bg": "#f7f5f0",
       "--cosmic-bg-deep": "#171514",
@@ -24,66 +35,72 @@ const THEMES = [
     },
   },
   {
-    id: "violet",
-    label: "Midnight Violet",
-    dot: "#8b5cf6",
+    id: "dusk",
+    label: "Dusk",
+    desc: "Violet + warm grain",
+    dot: "linear-gradient(135deg, #8b5cf6, #d946ef)",
+    dark: true,
     vars: {
-      "--cosmic-bg": "#0a0a0f",
-      "--cosmic-bg-deep": "#050508",
-      "--cosmic-surface": "#12111a",
-      "--lime": "#8b5cf6",
-      "--lime-soft": "#a78bfa",
-      "--lime-deep": "#7c3aed",
-      "--text-primary": "#f5f5fa",
-      "--text-secondary": "rgba(245,245,250,0.65)",
-      "--text-muted": "rgba(245,245,250,0.4)",
-      "--ink": "#f5f5fa",
-      "--line": "rgba(245,245,250,0.1)",
+      "--cosmic-bg": "#0c0a12",
+      "--cosmic-bg-deep": "#06050a",
+      "--cosmic-surface": "#13111c",
+      "--lime": "#a78bfa",
+      "--lime-soft": "#c4b5fd",
+      "--lime-deep": "#8b5cf6",
+      "--text-primary": "#faf7ff",
+      "--text-secondary": "rgba(250,247,255,0.60)",
+      "--text-muted": "rgba(250,247,255,0.35)",
+      "--ink": "#faf7ff",
+      "--line": "rgba(167,139,250,0.10)",
       "--accent-rgb": "139, 92, 246",
-      "--surface-hover": "rgba(255,255,255,0.03)",
+      "--surface-hover": "rgba(167,139,250,0.04)",
     },
   },
   {
     id: "blue",
-    label: "Obsidian Blue",
-    dot: "#3b82f6",
+    label: "Deep Ocean",
+    desc: "Blue + steel",
+    dot: "linear-gradient(135deg, #3b82f6, #06b6d4)",
+    dark: true,
     vars: {
       "--cosmic-bg": "#060609",
       "--cosmic-bg-deep": "#020204",
-      "--cosmic-surface": "#0d0f17",
-      "--lime": "#3b82f6",
-      "--lime-soft": "#60a5fa",
-      "--lime-deep": "#2563eb",
+      "--cosmic-surface": "#0c0e18",
+      "--lime": "#60a5fa",
+      "--lime-soft": "#93c5fd",
+      "--lime-deep": "#3b82f6",
       "--text-primary": "#f0f4f8",
-      "--text-secondary": "rgba(240,244,248,0.65)",
-      "--text-muted": "rgba(240,244,248,0.4)",
+      "--text-secondary": "rgba(240,244,248,0.60)",
+      "--text-muted": "rgba(240,244,248,0.35)",
       "--ink": "#f0f4f8",
-      "--line": "rgba(240,244,248,0.1)",
+      "--line": "rgba(96,165,250,0.10)",
       "--accent-rgb": "59, 130, 246",
-      "--surface-hover": "rgba(255,255,255,0.03)",
+      "--surface-hover": "rgba(96,165,250,0.04)",
     },
   },
   {
-    id: "coral",
-    label: "Dark Coral",
-    dot: "#d95035",
+    id: "ember",
+    label: "Ember",
+    desc: "Dark + warm coral",
+    dot: "linear-gradient(135deg, #d95035, #f59e0b)",
+    dark: true,
     vars: {
       "--cosmic-bg": "#0a0908",
       "--cosmic-bg-deep": "#050404",
-      "--cosmic-surface": "#141210",
-      "--lime": "#d95035",
-      "--lime-soft": "#ef765d",
-      "--lime-deep": "#a63824",
-      "--text-primary": "#f5f2ef",
-      "--text-secondary": "rgba(245,242,239,0.65)",
-      "--text-muted": "rgba(245,242,239,0.4)",
-      "--ink": "#f5f2ef",
-      "--line": "rgba(245,242,239,0.1)",
+      "--cosmic-surface": "#141110",
+      "--lime": "#ef765d",
+      "--lime-soft": "#f7a08e",
+      "--lime-deep": "#d95035",
+      "--text-primary": "#faf5f0",
+      "--text-secondary": "rgba(250,245,240,0.60)",
+      "--text-muted": "rgba(250,245,240,0.35)",
+      "--ink": "#faf5f0",
+      "--line": "rgba(239,118,93,0.10)",
       "--accent-rgb": "217, 80, 53",
-      "--surface-hover": "rgba(255,255,255,0.03)",
+      "--surface-hover": "rgba(239,118,93,0.04)",
     },
   },
-] as const;
+];
 
 export default function ThemeSwitcher() {
   const [active, setActive] = useState("light");
@@ -96,6 +113,11 @@ export default function ThemeSwitcher() {
     for (const [key, value] of Object.entries(theme.vars)) {
       root.style.setProperty(key, value);
     }
+    if (theme.dark) {
+      root.setAttribute("data-theme", "dark");
+    } else {
+      root.removeAttribute("data-theme");
+    }
     setActive(themeId);
   }
 
@@ -103,7 +125,7 @@ export default function ThemeSwitcher() {
     return (
       <button
         onClick={() => setOpen(true)}
-        className="fixed bottom-6 right-6 z-[100] flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] bg-[var(--cosmic-surface)] shadow-lg backdrop-blur-xl"
+        className="fixed bottom-6 right-6 z-[100] flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] bg-[var(--cosmic-surface)] shadow-lg backdrop-blur-xl transition-transform hover:scale-110"
         aria-label="Open theme switcher"
       >
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -115,8 +137,8 @@ export default function ThemeSwitcher() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-[100] flex flex-col gap-2 rounded-2xl border border-[var(--line)] bg-[var(--cosmic-surface)] p-3 shadow-2xl backdrop-blur-xl">
-      <div className="flex items-center justify-between gap-6 px-1">
+    <div className="fixed bottom-6 right-6 z-[100] flex w-52 flex-col gap-2 rounded-2xl border border-[var(--line)] bg-[var(--cosmic-surface)]/80 p-3 shadow-2xl backdrop-blur-2xl">
+      <div className="flex items-center justify-between px-1">
         <span className="font-[family-name:var(--font-geist-mono)] text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--text-muted)]">
           Theme
         </span>
@@ -130,25 +152,25 @@ export default function ThemeSwitcher() {
           </svg>
         </button>
       </div>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-0.5">
         {THEMES.map((theme) => (
           <button
             key={theme.id}
             onClick={() => applyTheme(theme.id)}
-            className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-left text-xs font-medium transition-colors ${
+            className={`flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-left transition-all ${
               active === theme.id
                 ? "bg-[var(--lime)]/10 text-[var(--text-primary)]"
                 : "text-[var(--text-secondary)] hover:bg-[var(--surface-hover)] hover:text-[var(--text-primary)]"
             }`}
           >
             <span
-              className="h-3 w-3 shrink-0 rounded-full ring-1 ring-white/20"
+              className="h-3.5 w-3.5 shrink-0 rounded-full ring-1 ring-white/20"
               style={{ background: theme.dot }}
             />
-            {theme.label}
-            {active === theme.id && (
-              <span className="ml-auto text-[10px] text-[var(--lime)]">Active</span>
-            )}
+            <span className="flex flex-col">
+              <span className="text-xs font-semibold">{theme.label}</span>
+              <span className="text-[10px] text-[var(--text-muted)]">{theme.desc}</span>
+            </span>
           </button>
         ))}
       </div>
