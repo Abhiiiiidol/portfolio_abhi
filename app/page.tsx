@@ -9,7 +9,6 @@ import ProductThinking from "./components/ProductThinking";
 import Toolkit from "./components/Toolkit";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import ThemeSwitcher from "./components/ThemeSwitcher";
 import SmoothScroll from "./components/SmoothScroll";
 import CustomCursor from "./components/CustomCursor";
 
@@ -31,7 +30,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-      <ThemeSwitcher />
     </>
   );
 }

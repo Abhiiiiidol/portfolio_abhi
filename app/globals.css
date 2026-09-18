@@ -1,26 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --cosmic-bg: #f7f5f0;
-  --cosmic-bg-deep: #171514;
-  --cosmic-surface: #eeebe4;
-  --lime: #d95035;
-  --lime-soft: #ef765d;
-  --lime-deep: #a63824;
-  --accent-2: #0891b2;
-  --accent-3: #be185d;
-  --accent-warm: #d97706;
-  --accent-2-rgb: 8, 145, 178;
-  --accent-3-rgb: 190, 24, 93;
-  --text-primary: #171514;
-  --text-secondary: #615d57;
-  --text-muted: #8b857d;
-  --ink: #171514;
-  --ink-muted: #615d57;
-  --ink-soft: #8b857d;
-  --line: rgba(23, 21, 20, .13);
-  --accent-rgb: 217, 80, 53;
-  --surface-hover: rgba(0,0,0,0.02);
+  --cosmic-bg: #0c0a12;
+  --cosmic-bg-deep: #06050a;
+  --cosmic-surface: #13111c;
+  --lime: #a78bfa;
+  --lime-soft: #c4b5fd;
+  --lime-deep: #8b5cf6;
+  --accent-2: #22d3ee;
+  --accent-3: #f472b6;
+  --accent-warm: #fbbf24;
+  --accent-2-rgb: 34, 211, 238;
+  --accent-3-rgb: 244, 114, 182;
+  --text-primary: #faf7ff;
+  --text-secondary: rgba(250,247,255,0.60);
+  --text-muted: rgba(250,247,255,0.35);
+  --ink: #faf7ff;
+  --ink-muted: rgba(250,247,255,0.60);
+  --ink-soft: rgba(250,247,255,0.35);
+  --line: rgba(167,139,250,0.10);
+  --accent-rgb: 139, 92, 246;
+  --surface-hover: rgba(167,139,250,0.04);
 }
 
 @theme inline {
