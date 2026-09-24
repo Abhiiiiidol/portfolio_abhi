@@ -43,7 +43,7 @@ export default function HeroCopy() {
 
       <motion.h1
         variants={item}
-        className="text-4xl font-bold leading-[1.08] tracking-tight text-[var(--text-primary)] sm:text-5xl lg:text-[3.6rem]"
+        className="text-3xl font-bold leading-[1.08] tracking-tight text-[var(--text-primary)] sm:text-4xl lg:text-[3rem]"
       >
         Hi, I&apos;m{" "}
         <span className="relative inline-block">
@@ -60,7 +60,7 @@ export default function HeroCopy() {
 
       <motion.h2
         variants={item}
-        className="min-h-[2.4em] text-xl font-medium leading-tight text-[var(--text-secondary)] sm:min-h-[1.4em] sm:text-2xl lg:text-[1.7rem]"
+        className="min-h-[2.4em] text-lg font-medium leading-tight text-[var(--text-secondary)] sm:min-h-[1.4em] sm:text-xl lg:text-2xl"
       >
         <RotatingText />
       </motion.h2>
@@ -106,7 +106,7 @@ export default function HeroCopy() {
       >
         {STATS.map((stat, i) => (
           <div key={stat.label} className={`flex flex-col gap-0.5 ${i > 0 ? "sm:border-l sm:border-white/[0.06] sm:pl-8" : ""}`}>
-            <span className="font-[family-name:var(--font-geist-mono)] text-2xl font-bold text-[var(--lime)] lg:text-3xl">
+            <span className="font-[family-name:var(--font-geist-mono)] text-xl font-bold text-[var(--lime)] lg:text-2xl">
               {stat.value}
             </span>
             <span className="text-xs text-[var(--text-muted)]">
