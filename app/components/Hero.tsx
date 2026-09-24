@@ -31,22 +31,21 @@ export default function Hero() {
             </svg>
           </motion.span>
 
-          <div className="relative">
+          <div
+            className="relative"
+            style={{
+              maskImage: "radial-gradient(ellipse 60% 55% at 55% 45%, black 20%, transparent 70%)",
+              WebkitMaskImage: "radial-gradient(ellipse 60% 55% at 55% 45%, black 20%, transparent 70%)",
+            }}
+          >
             <video
-              className="pointer-events-none aspect-[3/4] w-full object-cover sm:aspect-[4/5] lg:aspect-[3/4]"
+              className="pointer-events-none aspect-[3/4] w-full scale-110 object-cover sm:aspect-[4/5] lg:aspect-[3/4]"
               autoPlay muted loop playsInline preload="metadata"
               poster="/hero-video-poster.jpg"
               aria-label="Introduction video featuring Abhinav Kumar"
             >
               <source src="/hero-video-clean.mp4" type="video/mp4" />
             </video>
-            {/* Heavy edge-blend overlays on all four sides */}
-            <div className="pointer-events-none absolute inset-0" aria-hidden="true" style={{ background: "linear-gradient(to top, var(--cosmic-bg) 0%, var(--cosmic-bg) 5%, transparent 35%)" }} />
-            <div className="pointer-events-none absolute inset-0" aria-hidden="true" style={{ background: "linear-gradient(to bottom, var(--cosmic-bg) 0%, transparent 25%)" }} />
-            <div className="pointer-events-none absolute inset-0" aria-hidden="true" style={{ background: "linear-gradient(to left, var(--cosmic-bg) 0%, transparent 30%)" }} />
-            <div className="pointer-events-none absolute inset-0" aria-hidden="true" style={{ background: "linear-gradient(to right, var(--cosmic-bg) 0%, transparent 25%)" }} />
-            {/* Radial vignette for the corners */}
-            <div className="pointer-events-none absolute inset-0" aria-hidden="true" style={{ background: "radial-gradient(ellipse 65% 60% at 55% 50%, transparent 35%, var(--cosmic-bg) 75%)" }} />
           </div>
         </motion.div>
       </div>
