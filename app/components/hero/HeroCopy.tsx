@@ -18,29 +18,36 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
+const STATS = [
+  { value: "2+", label: "Years Experience" },
+  { value: "10+", label: "Products Shipped" },
+  { value: "4.6L+", label: "Users Impacted" },
+  { value: "4+", label: "Industries" },
+];
+
 export default function HeroCopy() {
   return (
     <motion.div
       variants={container}
       initial="hidden"
       animate="show"
-      className="flex flex-col gap-6 text-left"
+      className="flex flex-col gap-5 text-left"
     >
       <motion.span
         variants={item}
-        className="inline-flex w-fit items-center gap-2 rounded-full border border-[var(--lime)]/30 bg-[rgba(var(--accent-rgb),0.06)] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--lime)] backdrop-blur-sm"
+        className="inline-flex w-fit items-center gap-2.5 rounded-full border border-white/[0.08] bg-white/[0.04] px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--text-primary)] backdrop-blur-sm"
       >
-        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[var(--accent-warm)]" />
-        Available for new opportunities
+        <span className="h-2 w-2 rounded-full bg-[#22c55e]" />
+        Product Manager
       </motion.span>
 
       <motion.h1
         variants={item}
-        className="text-4xl font-semibold leading-[1.05] tracking-tight text-[var(--text-primary)] sm:text-5xl lg:text-[3.4rem]"
+        className="text-4xl font-bold leading-[1.08] tracking-tight text-[var(--text-primary)] sm:text-5xl lg:text-[3.6rem]"
       >
         Hi, I&apos;m{" "}
         <span className="relative inline-block">
-          <span className="bg-gradient-to-r from-[var(--lime)] via-[var(--accent-3)] to-[var(--accent-2)] bg-clip-text text-transparent">
+          <span className="text-[var(--lime)]">
             <TextScramble text="Abhinav" delay={600} />
           </span>
           <span
@@ -53,24 +60,24 @@ export default function HeroCopy() {
 
       <motion.h2
         variants={item}
-        className="min-h-[2.4em] text-2xl font-medium leading-tight text-[var(--text-secondary)] sm:min-h-[1.4em] sm:text-3xl"
+        className="min-h-[2.4em] text-xl font-medium leading-tight text-[var(--text-secondary)] sm:min-h-[1.4em] sm:text-2xl lg:text-[1.7rem]"
       >
         <RotatingText />
       </motion.h2>
 
       <motion.p
         variants={item}
-        className="max-w-xl text-base leading-relaxed text-[var(--text-secondary)] sm:text-[17px]"
+        className="max-w-xl text-[15px] leading-relaxed text-[var(--text-secondary)] sm:text-base"
       >
         Product Manager with{" "}
-        <span className="text-[var(--text-primary)]">2+ years</span> shipping across
-        FinTech, Healthcare, E-Commerce, and Logistics. I pair deep{" "}
-        <span className="text-[var(--lime)]">user empathy</span> with sharp{" "}
-        <span className="text-[var(--lime)]">product strategy</span> to turn ambiguity
-        into roadmaps that ship.
+        <span className="font-semibold text-[var(--text-primary)]">2+ years</span> of experience across
+        FinTech, Healthcare, E-Commerce and Logistics. I combine deep{" "}
+        <span className="text-[var(--lime)]">user empathy</span> with data-driven{" "}
+        <span className="text-[var(--lime)]">product strategy</span> to build scalable,
+        real-world solutions.
       </motion.p>
 
-      <motion.div variants={item} className="flex flex-wrap items-center gap-3 pt-2">
+      <motion.div variants={item} className="flex flex-wrap items-center gap-3 pt-1">
         <MagneticButton strength={0.3} data-magnetic>
           <a
             href="#work"
@@ -86,11 +93,27 @@ export default function HeroCopy() {
         <MagneticButton strength={0.3} data-magnetic>
           <a
             href="#contact"
-            className="inline-flex h-12 items-center justify-center rounded-full border border-[var(--line)] bg-[var(--surface-hover)] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/50 hover:bg-[rgba(var(--accent-rgb),0.06)]"
+            className="inline-flex h-12 items-center justify-center rounded-full border border-white/[0.1] bg-white/[0.04] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/40 hover:bg-white/[0.08]"
           >
             Get in touch
           </a>
         </MagneticButton>
+      </motion.div>
+
+      <motion.div
+        variants={item}
+        className="mt-4 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-4 sm:gap-x-8"
+      >
+        {STATS.map((stat, i) => (
+          <div key={stat.label} className={`flex flex-col gap-0.5 ${i > 0 ? "sm:border-l sm:border-white/[0.06] sm:pl-8" : ""}`}>
+            <span className="font-[family-name:var(--font-geist-mono)] text-2xl font-bold text-[var(--lime)] lg:text-3xl">
+              {stat.value}
+            </span>
+            <span className="text-xs text-[var(--text-muted)]">
+              {stat.label}
+            </span>
+          </div>
+        ))}
       </motion.div>
     </motion.div>
   );

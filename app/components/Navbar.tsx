@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
-  { label: "Work", href: "#work" },
+  { label: "Projects", href: "#work" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -36,14 +36,14 @@ export default function Navbar() {
     <nav
       className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-b border-black/10 bg-[var(--cosmic-bg)]/90 backdrop-blur-xl"
+          ? "border-b border-white/[0.06] bg-[var(--cosmic-bg)]/90 backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-6 md:px-12 lg:px-16">
         <a
           href="#"
-          className="text-lg font-semibold tracking-tight text-[var(--text-primary)]"
+          className="text-xl font-bold tracking-tight text-[var(--text-primary)]"
         >
           AK<span className="text-[var(--lime)]">.</span>
         </a>
@@ -53,20 +53,23 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--lime)]"
+              className="text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
             >
               {link.label}
             </a>
           ))}
-          <a
-            href="/Abhinav_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-9 items-center rounded-full border border-[var(--lime)]/30 bg-[rgba(var(--accent-rgb),0.06)] px-5 text-sm font-medium text-[var(--lime)] transition-colors hover:bg-[rgba(var(--accent-rgb),0.12)]"
-          >
-            Resume
-          </a>
         </div>
+
+        <a
+          href="/Abhinav_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden h-10 items-center gap-2 rounded-full bg-gradient-to-r from-[var(--lime-deep)] via-[var(--lime)] to-[var(--accent-3)] px-6 text-sm font-semibold text-white transition-transform hover:scale-[1.03] active:scale-[0.97] md:inline-flex"
+          style={{ boxShadow: "0 0 24px rgba(var(--accent-rgb),0.3)" }}
+        >
+          <Download size={14} />
+          Resume
+        </a>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -92,7 +95,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-lg px-4 py-3 text-sm text-[var(--text-secondary)] transition-colors hover:bg-[var(--surface-hover)] hover:text-[var(--lime)]"
+                  className="rounded-lg px-4 py-3 text-sm text-[var(--text-secondary)] transition-colors hover:bg-[var(--surface-hover)] hover:text-[var(--text-primary)]"
                 >
                   {link.label}
                 </a>
@@ -102,8 +105,9 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 inline-flex h-10 items-center justify-center rounded-full border border-[var(--lime)]/30 bg-[rgba(var(--accent-rgb),0.06)] text-sm font-medium text-[var(--lime)]"
+                className="mt-2 inline-flex h-10 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[var(--lime-deep)] via-[var(--lime)] to-[var(--accent-3)] text-sm font-semibold text-white"
               >
+                <Download size={14} />
                 Resume
               </a>
             </div>
