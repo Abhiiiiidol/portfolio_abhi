@@ -14,7 +14,7 @@ const container: Variants = {
 };
 
 const item: Variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 16 },
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
@@ -31,19 +31,19 @@ export default function HeroCopy() {
       variants={container}
       initial="hidden"
       animate="show"
-      className="flex flex-col gap-5 text-left"
+      className="flex flex-col gap-4 text-left"
     >
       <motion.span
         variants={item}
-        className="inline-flex w-fit items-center gap-2.5 rounded-full border border-white/[0.08] bg-white/[0.04] px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--text-primary)] backdrop-blur-sm"
+        className="inline-flex w-fit items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--text-primary)] backdrop-blur-sm"
       >
-        <span className="h-2 w-2 rounded-full bg-[#22c55e]" />
+        <span className="h-1.5 w-1.5 rounded-full bg-[#22c55e]" />
         Product Manager
       </motion.span>
 
       <motion.h1
         variants={item}
-        className="text-3xl font-bold leading-[1.08] tracking-tight text-[var(--text-primary)] sm:text-4xl lg:text-[3rem]"
+        className="text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-[1.1] tracking-tight text-[var(--text-primary)]"
       >
         Hi, I&apos;m{" "}
         <span className="relative inline-block">
@@ -60,14 +60,14 @@ export default function HeroCopy() {
 
       <motion.h2
         variants={item}
-        className="min-h-[2.4em] text-lg font-medium leading-tight text-[var(--text-secondary)] sm:min-h-[1.4em] sm:text-xl lg:text-2xl"
+        className="min-h-[2em] text-[clamp(1rem,2vw,1.35rem)] font-medium leading-tight text-[var(--text-secondary)] sm:min-h-[1.4em]"
       >
         <RotatingText />
       </motion.h2>
 
       <motion.p
         variants={item}
-        className="max-w-xl text-[15px] leading-relaxed text-[var(--text-secondary)] sm:text-base"
+        className="max-w-lg text-[clamp(0.8rem,1.2vw,0.938rem)] leading-relaxed text-[var(--text-secondary)]"
       >
         Product Manager with{" "}
         <span className="font-semibold text-[var(--text-primary)]">2+ years</span> of experience across
@@ -81,8 +81,8 @@ export default function HeroCopy() {
         <MagneticButton strength={0.3} data-magnetic>
           <a
             href="#work"
-            className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-[var(--lime-deep)] via-[var(--lime)] to-[var(--accent-3)] px-7 text-sm font-semibold text-white transition-transform hover:scale-[1.02] active:scale-[0.98]"
-            style={{ boxShadow: "0 0 32px rgba(var(--accent-rgb),0.4)" }}
+            className="group relative inline-flex h-11 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-[var(--lime-deep)] via-[var(--lime)] to-[var(--accent-3)] px-6 text-sm font-semibold text-white transition-transform hover:scale-[1.02] active:scale-[0.98]"
+            style={{ boxShadow: "0 0 24px rgba(var(--accent-rgb),0.35)" }}
           >
             See my work
             <span aria-hidden="true" className="ml-2 transition-transform group-hover:translate-x-0.5">
@@ -93,7 +93,7 @@ export default function HeroCopy() {
         <MagneticButton strength={0.3} data-magnetic>
           <a
             href="#contact"
-            className="inline-flex h-12 items-center justify-center rounded-full border border-white/[0.1] bg-white/[0.04] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/40 hover:bg-white/[0.08]"
+            className="inline-flex h-11 items-center justify-center rounded-full border border-white/[0.1] bg-white/[0.04] px-6 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/40 hover:bg-white/[0.08]"
           >
             Get in touch
           </a>
@@ -102,14 +102,14 @@ export default function HeroCopy() {
 
       <motion.div
         variants={item}
-        className="mt-4 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-4 sm:gap-x-8"
+        className="mt-2 grid grid-cols-2 gap-x-5 gap-y-3 sm:grid-cols-4 sm:gap-x-6"
       >
         {STATS.map((stat, i) => (
-          <div key={stat.label} className={`flex flex-col gap-0.5 ${i > 0 ? "sm:border-l sm:border-white/[0.06] sm:pl-8" : ""}`}>
-            <span className="font-[family-name:var(--font-geist-mono)] text-xl font-bold text-[var(--lime)] lg:text-2xl">
+          <div key={stat.label} className={`flex flex-col gap-0.5 ${i > 0 ? "sm:border-l sm:border-white/[0.06] sm:pl-6" : ""}`}>
+            <span className="font-[family-name:var(--font-geist-mono)] text-lg font-bold text-[var(--lime)] lg:text-xl">
               {stat.value}
             </span>
-            <span className="text-xs text-[var(--text-muted)]">
+            <span className="text-[11px] text-[var(--text-muted)]">
               {stat.label}
             </span>
           </div>
