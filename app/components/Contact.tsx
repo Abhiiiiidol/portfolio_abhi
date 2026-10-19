@@ -32,7 +32,7 @@ export default function Contact() {
                 className="btn-slab w-full font-semibold sm:w-auto"
                 style={{
                   "--btn-bg": "#ffffff",
-                  "--btn-fg": "#2c3480",
+                  "--btn-fg": "#1c3e9c",
                   "--btn-wipe": "#000000",
                   "--btn-wipe-fg": "#ffffff",
                 } as React.CSSProperties}

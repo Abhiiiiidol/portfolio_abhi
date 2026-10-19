@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
-/* Black / White / Cobalt Blue Deep. Deep cobalt is only 1.9:1 on black, so it is a FILL there;
-   --lime (a lighter cobalt, 6:1 on black) is the only cobalt allowed as text or hairlines on black. */
+/* Black / White / Sapphire, sampled from the VELARA reference (hue ~224°). The deep sapphire is only 2.2:1
+   on black, so there it is a FILL (white text on it is 9.5:1); --lime (6.2:1 on black) is the only blue
+   allowed as text or hairlines on black. */
 :root {
   --cosmic-bg: #000000;
   --cosmic-surface: #0a0a0a;
-  --lime: #7380e8;
-  --lime-deep: #2c3480;
+  --lime: #5f86f2;
+  --lime-deep: #1c3e9c;
   --text-primary: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.68);
   --text-muted: rgba(255, 255, 255, 0.5);
@@ -18,7 +19,7 @@
 .surface-paper {
   --cosmic-bg: #ffffff;
   --cosmic-surface: #ffffff;
-  --lime: #2c3480;
+  --lime: #1c3e9c;
   --text-primary: #000000;
   --text-secondary: rgba(0, 0, 0, 0.64);
   --text-muted: rgba(0, 0, 0, 0.56);
@@ -29,13 +30,13 @@
 }
 
 .surface-cobalt {
-  --cosmic-bg: #2c3480;
+  --cosmic-bg: #1c3e9c;
   --lime: #ffffff;
   --text-primary: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.78);
   --text-muted: rgba(255, 255, 255, 0.62);
   --line: rgba(255, 255, 255, 0.24);
-  background: #2c3480;
+  background: #1c3e9c;
   color: #ffffff;
 }
 
