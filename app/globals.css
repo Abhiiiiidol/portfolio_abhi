@@ -197,6 +197,59 @@ body {
   }
 }
 
+/* Hero orbit: light streaks travel along the rings; labels and particles drift. */
+@keyframes orbit-streak {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+@keyframes orbit-label {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-4px);
+    opacity: 0.92;
+  }
+}
+
+@keyframes orbit-twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.orbit-streak {
+  animation: orbit-streak linear infinite;
+}
+
+.orbit-reverse {
+  animation-direction: reverse;
+}
+
+.orbit-label {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+  animation: orbit-label ease-in-out infinite;
+}
+
+.orbit-twinkle {
+  animation: orbit-twinkle 3.2s ease-in-out infinite;
+}
+
+/* stroke-dashoffset repaints every frame, so stop everything once the hero is off-screen */
+.orbit-paused .orbit-streak,
+.orbit-paused .orbit-label,
+.orbit-paused .orbit-twinkle {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
