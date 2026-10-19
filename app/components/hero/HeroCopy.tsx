@@ -31,7 +31,7 @@ export default function HeroCopy() {
       variants={container}
       initial="hidden"
       animate="show"
-      className="flex flex-col gap-4 text-left"
+      className="isolate flex flex-col gap-4 text-left"
     >
       <motion.span
         variants={item}
