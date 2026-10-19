@@ -57,7 +57,7 @@ const SKILL_GROUPS: SkillGroup[] = [
 
 export default function Toolkit() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section className="relative pb-16 pt-24 lg:pb-20 lg:pt-32">
       <div className="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
         <FadeIn>
           <span className="eyebrow">Toolkit</span>
@@ -65,7 +65,7 @@ export default function Toolkit() {
 
         <FadeIn delay={0.1}>
           <h2 className="display display-2 mt-4 text-[var(--text-primary)]">
-            What I work with
+            The stack behind the work
           </h2>
         </FadeIn>
 

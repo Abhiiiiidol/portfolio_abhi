@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const PHRASES = [
-  "I build products people love.",
-  "I turn ambiguity into shipped products.",
-  "I pair user empathy with sharp strategy.",
-  "I ship fast and measure everything.",
+  "I find the friction, then ship the fix.",
+  "I talk to users so the roadmap doesn't guess.",
+  "AI-native PM. Metrics or it didn't happen.",
+  "Fluent in FinTech, HealthTech and AI.",
 ];
 
 export default function RotatingText({ className = "" }: { className?: string }) {

@@ -7,21 +7,21 @@ export default function Contact() {
       <div className="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
         <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
           <FadeIn>
-            <span className="eyebrow">Get in Touch</span>
+            <span className="eyebrow">Open to PM roles</span>
           </FadeIn>
 
           <FadeIn delay={0.1}>
             <h2 className="display display-2 mt-4 text-[var(--text-primary)]">
-              Let&apos;s build something
+              Got a messy problem?
               <br />
-              great together.
+              Let&apos;s ship the fix.
             </h2>
           </FadeIn>
 
           <FadeIn delay={0.2}>
             <p className="mt-5 text-[17px] leading-relaxed text-[var(--text-secondary)]">
-              I&apos;m open to Product Manager roles, collaborations, and
-              conversations about product, AI, and building things people love.
+              I&apos;m open to Product Manager roles, collabs, and long chats about
+              product and AI. If you&apos;re hiring or building, my inbox is open.
             </p>
           </FadeIn>
 

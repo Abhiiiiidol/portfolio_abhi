@@ -8,31 +8,31 @@ const STEPS = [
     number: "01",
     title: "Discover",
     description:
-      "User interviews, data analysis, and competitive research to find the real problem — not the assumed one.",
+      "Talk to users, dig through the data, scope the competition. Find the real problem, not the loudest one.",
   },
   {
     number: "02",
     title: "Define",
     description:
-      "PRDs, problem framing, and ruthless prioritization. Say no to 10 things to say yes to the right one.",
+      "Sharp PRDs and ruthless prioritization. Saying no to ten things so the right one actually ships.",
   },
   {
     number: "03",
     title: "Design",
     description:
-      "Prototyping in Figma, user flow mapping, and A/B test hypotheses before engineering writes a single line.",
+      "Map the flow, prototype in Figma, write the A/B hypothesis, all before engineering writes a line.",
   },
   {
     number: "04",
     title: "Deliver",
     description:
-      "Tight collaboration with engineering, clear API contracts, and stakeholder alignment to ship without surprises.",
+      "Build in lockstep with engineering, design and QA. Stakeholders stay in the loop, so launch day has no surprises.",
   },
   {
     number: "05",
     title: "Measure",
     description:
-      "Funnel analysis, retention tracking, and KPI dashboards. Every shipped feature earns its place with data.",
+      "Funnels, retention, drop-off points. Every feature has to earn its spot with data.",
   },
 ];
 
@@ -46,15 +46,15 @@ export default function ProductThinking() {
 
         <FadeIn delay={0.1}>
           <h2 className="display display-2 mt-4 max-w-3xl text-[var(--text-primary)]">
-            Product thinking, not feature shipping
+            Ship to learn, not to impress
           </h2>
         </FadeIn>
 
         <FadeIn delay={0.2}>
           <p className="mt-4 max-w-2xl text-[17px] leading-relaxed text-[var(--text-secondary)]">
-            I don&apos;t start with solutions. I start with users, constraints,
-            and the business context — then work toward the smallest thing we
-            can ship to learn the most.
+            I don&apos;t start with solutions. I start with the user, the
+            constraints and the business, then ship the smallest thing that
+            teaches us the most.
           </p>
         </FadeIn>
 

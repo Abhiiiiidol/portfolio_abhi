@@ -1,11 +1,14 @@
 import FadeIn from "./FadeIn";
 
+type Impact = { value: string; label: string };
+
 type Project = {
   title: string;
   category: string;
   problem: string;
   outcome: string;
-  metric?: string;
+  impact: Impact[];
+  impactKind?: "Impact" | "Scope";
   tags: string[];
 };
 
@@ -14,30 +17,34 @@ const PROJECTS: Project[] = [
     title: "Smart Reconciliation & Connected Banking",
     category: "FinTech · BUSY InfoTech",
     problem:
-      "Users on a platform serving 4.6 lakh+ active businesses faced fragmented payment flows, manual reconciliation, and drop-offs across multiple banking partners.",
+      "On a platform serving 4.6 lakh+ active users, people were dropping off mid-flow. Reconciling bank transactions meant leaving BUSY to do it somewhere else.",
     outcome:
-      "Built an AI-powered smart reconciliation feature blended with connected banking (ICICI, Axis, HDFC). Validated pain points through 162-user discovery research.",
-    metric: "40% fewer drop-offs",
-    tags: ["User Research", "AI/ML", "Banking Integration", "Connected Banking"],
+      "Walked the full flow to find where users dropped off, then built AI-powered smart reconciliation on connected banking: download and reconcile transactions without leaving BUSY. Payment pain points validated with 162 users.",
+    impact: [{ value: "40%", label: "fewer drop-offs · retention up" }],
+    tags: ["User Research", "AI Features", "Connected Banking", "Retention"],
   },
   {
     title: "PM-Mem: AI Chat Memory for PMs",
     category: "AI Product · Side Project",
     problem:
-      "Product Managers lose critical context across ChatGPT, Claude, Perplexity, and Gemini sessions — research, chats, and decisions die when sessions close.",
+      "Research, chats and decisions are scattered across ChatGPT, Claude, Perplexity and Gemini, and they vanish the moment a session closes. A very real PM pain point.",
     outcome:
-      "Built a privacy-first memory layer that captures conversations with explicit user consent. Export as Markdown or auto-summarize to keep research threads alive across context windows.",
-    metric: "Cross-platform memory",
-    tags: ["LLMs", "Privacy-First", "Developer Tool", "RAG"],
+      "Built a privacy-first memory layer that saves conversations from all four tools in one place, only with explicit consent. Export any chat as Markdown to seed a fresh session, or auto-summarize it to keep long research alive across context windows.",
+    impact: [{ value: "4", label: "AI tools, one memory" }],
+    impactKind: "Scope",
+    tags: ["LLMs", "Privacy-First", "Cross-Platform", "PM Tooling"],
   },
   {
     title: "Rakthmanch: Blood Availability Platform",
-    category: "HealthTech · Project",
+    category: "HealthTech · Side Project",
     problem:
-      "Finding available blood donors is time-critical and chaotic — no real-time visibility into blood-type availability nearby.",
+      "When someone needs blood, every minute counts, and there was no live view of which blood types were available nearby.",
     outcome:
-      "Built a consumer web platform surfacing real-time blood-type availability within 50 km, with user auth, interactive posts, and live database updates. Ran A/B testing on redesigned UI in Figma.",
-    metric: "15% better task completion · 22% fewer bugs",
+      "Built a consumer web platform showing real-time blood-type availability within 50 km, with auth, interactive posts and live database updates linking donors and recipients. Then A/B tested a Figma redesign of the UI.",
+    impact: [
+      { value: "+15%", label: "task completion" },
+      { value: "−22%", label: "user-reported bugs" },
+    ],
     tags: ["A/B Testing", "Real-Time Data", "Figma", "User-Centered Design"],
   },
 ];
@@ -52,7 +59,7 @@ export default function SelectedWork() {
 
         <FadeIn delay={0.1}>
           <h2 className="display display-2 mt-4 text-[var(--text-primary)]">
-            Products I&apos;ve <span className="text-[var(--lime)]">shaped</span>
+            Work with <span className="text-[var(--lime)]">receipts</span>
           </h2>
         </FadeIn>
 
@@ -102,14 +109,25 @@ export default function SelectedWork() {
                   </div>
                 </div>
 
-                {project.metric && (
-                  <div className="lg:border-l lg:border-[var(--line)] lg:pl-8">
-                    <span className="eyebrow">Impact</span>
-                    <p className="mt-2 text-xl font-medium leading-snug text-[var(--text-primary)]">
-                      {project.metric}
-                    </p>
-                  </div>
-                )}
+                <div className="lg:border-l lg:border-[var(--line)] lg:pl-8">
+                  <span className="eyebrow">{project.impactKind ?? "Impact"}</span>
+                  <dl className="mt-3 flex flex-wrap gap-x-10 gap-y-6 lg:flex-col">
+                    {project.impact.map((item) => (
+                      <div key={item.label} className="flex flex-col-reverse gap-2">
+                        <dt className="eyebrow">
+                          {item.label.split(" · ").map((part) => (
+                            <span key={part} className="block">
+                              {part}
+                            </span>
+                          ))}
+                        </dt>
+                        <dd className="text-[clamp(2.5rem,4vw,3.5rem)] font-light leading-none tracking-tight tabular-nums text-[var(--text-primary)]">
+                          {item.value}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
               </article>
             </FadeIn>
           ))}

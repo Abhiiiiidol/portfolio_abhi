@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-black">
       <div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-6 md:px-12 lg:px-16">
         <span className="text-sm text-[var(--text-muted)]">
-          &copy; {new Date().getFullYear()} Abhinav Kumar
+          &copy; {new Date().getFullYear()} Abhinav Kumar · Delhi, India
         </span>
         <div className="flex items-center gap-6">
           <a

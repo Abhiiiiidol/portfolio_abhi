@@ -11,14 +11,16 @@ type Role = {
 const ROLES: Role[] = [
   {
     company: "BUSY InfoTech",
-    companyNote: "An IndiaMart Company",
+    companyNote: "An IndiaMART company",
     title: "Associate Product Manager",
     period: "Jan 2026 — Present",
     highlights: [
-      "Owned a 0→1 product end-to-end on a platform serving 4.6 lakh+ active users — mapped user flows, identified friction points, and shipped iterative releases to accelerate time-to-market.",
-      "Built an AI-powered smart reconciliation feature blended with connected banking (ICICI, Axis, HDFC), enabling in-app transaction reconciliation — increased retention and reduced drop-offs by 40%.",
-      "Ran direct discovery with 162 users to validate inventory and payment pain points, prioritized the right fixes, and closed the loop on surfaced issues.",
-      "Co-built \"Busy Magic,\" an AI-powered platform initiative with corporate-banking integrations — drove 40% higher adoption and 30% reduction in user friction.",
+      "Owned a 0→1 product end-to-end on a platform serving 4.6 lakh+ active users. Mapped the full flow, found the friction, and shipped iterative releases with engineering and senior stakeholders.",
+      "Cut drop-offs 40% with AI-powered smart reconciliation built on connected banking, so users download and reconcile transactions without leaving BUSY. Retention went up too.",
+      "Halved payment friction time by kicking off Phase-1 integrations with ICICI, Axis and HDFC for in-product payments. Added contextual CA suggestions that connect users with BUSY-associated Chartered Accountants right when they need one.",
+      "Spotted stock-outs, manual reorder cycles and poor demand visibility, then proposed an AI inventory forecasting feature with automated replenishment alerts. Manual inventory work dropped 50%.",
+      "Co-built \"Busy Magic,\" an AI-powered platform initiative with corporate-banking integrations: 40% higher adoption, 30% less user friction.",
+      "Heard from 162 users, in-app and off-platform, to validate inventory and payment pain. Prioritized the fixes that mattered and closed the loop on what they surfaced.",
     ],
   },
   {
@@ -26,17 +28,17 @@ const ROLES: Role[] = [
     title: "Associate Product Manager",
     period: "Jun 2025 — Jan 2026",
     highlights: [
-      "Drove product strategy for a B2C healthcare app used by 500+ users globally — designed a personalised provider recommendation system, lifting engagement and retention by 25%.",
-      "Built an AI agent to automate contact extraction for BD teams, improving operational efficiency by ~30%.",
-      "Used analytics and feedback tools to isolate top drop-off points in the consumer journey — partnered with design, tech, and QA to ship MVPs.",
-      "Drove product roadmap through market and competitor research, delivering PRDs and GTM strategy — achieved 20% lift in user interest.",
+      "Lifted engagement and retention 25% by designing and improving a personalised provider recommendation system that matches users with best-fit therapists and doctors, on a B2C healthcare app used by 500+ users globally.",
+      "Built an AI agent that automated the BD team's manual contact extraction: ~30% more operational efficiency, way less repetitive work.",
+      "Dug into analytics and feedback to pinpoint the biggest drop-off and friction points in the consumer journey, then shipped MVPs with design, tech and QA to fix them.",
+      "Shaped the roadmap through market and competitor research, and wrote the PRDs and GTM strategy. Result: a 20% lift in user interest and faster release cycles.",
     ],
   },
 ];
 
 export default function Experience() {
   return (
-    <section id="experience" className="relative py-24 lg:py-32">
+    <section id="experience" className="relative pb-16 pt-24 lg:pb-20 lg:pt-32">
       <div className="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
         <FadeIn>
           <span className="eyebrow">Experience</span>
@@ -44,7 +46,7 @@ export default function Experience() {
 
         <FadeIn delay={0.1}>
           <h2 className="display display-2 mt-4 text-[var(--text-primary)]">
-            Where I&apos;ve built
+            Where I&apos;ve shipped
           </h2>
         </FadeIn>
 

@@ -19,10 +19,10 @@ const item: Variants = {
 };
 
 const STATS = [
-  { value: "2+", label: "Years Experience" },
-  { value: "10+", label: "Products Shipped" },
-  { value: "4.6L+", label: "Users Impacted" },
-  { value: "4+", label: "Industries" },
+  { value: "0→1", label: "Product Owned" },
+  { value: "4.6L+", label: "Platform Users" },
+  { value: "162", label: "Users Heard" },
+  { value: "40%", label: "Fewer Drop-offs" },
 ];
 
 export default function HeroCopy() {
@@ -35,7 +35,7 @@ export default function HeroCopy() {
     >
       <motion.span variants={item} className="eyebrow flex items-center gap-3">
         <span aria-hidden="true" className="h-px w-8 bg-[var(--lime)]" />
-        Product Manager
+        Product Manager · FinTech &amp; AI
       </motion.span>
 
       <motion.h1
@@ -64,21 +64,20 @@ export default function HeroCopy() {
         variants={item}
         className="max-w-lg text-[clamp(0.875rem,1.15vw,0.95rem)] leading-relaxed text-[var(--text-secondary)]"
       >
-        Product Manager with{" "}
-        <span className="text-white">2+ years</span> of experience across
-        FinTech, Healthcare, E-Commerce and Logistics. I combine deep{" "}
-        <span className="text-white">user empathy</span> with data-driven{" "}
-        <span className="text-white">product strategy</span> to build scalable,
-        real-world solutions.
+        Associate PM at BUSY InfoTech, owning a{" "}
+        <span className="text-white">0→1 product</span> on a platform with{" "}
+        <span className="text-white">4.6 lakh+ active users</span>. Before that,
+        healthcare at MantraCare. I chase user pain, back every call with data,
+        and ship what moves <span className="text-white">retention</span>.
       </motion.p>
 
       <motion.div variants={item} className="flex flex-col items-start gap-6 pt-1 sm:flex-row sm:items-center sm:gap-8">
         <a href="#work" className="btn-slab w-full sm:w-auto">
-          See my work
+          See the work
           <span aria-hidden="true">→</span>
         </a>
         <a href="#contact" className="link-editorial">
-          Get in touch
+          Let&apos;s talk
           <svg aria-hidden="true" width="28" height="10" viewBox="0 0 28 10" fill="none">
             <path d="M0 5h26M22 1l4 4-4 4" stroke="currentColor" strokeWidth="1.2" />
           </svg>

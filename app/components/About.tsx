@@ -38,38 +38,36 @@ export default function About() {
 
           <FadeIn delay={0.1}>
             <h2 className="display display-2 text-[var(--text-primary)]">
-              I turn ambiguity into
+              Obsessed with users.
               <br />
-              products that ship.
+              Allergic to guesswork.
             </h2>
           </FadeIn>
 
           <FadeIn delay={0.2}>
             <p className="max-w-xl text-[17px] leading-relaxed text-[var(--text-secondary)]">
-              I&apos;m a Product Manager who believes great products come from
-              deeply understanding users, not from following frameworks blindly.
-              I combine user research with data-driven decision making to ship
-              products that create measurable impact.
+              I&apos;m an Associate PM who&apos;d rather sit with a frustrated user
+              than a framework. I map the flow, find where people drop off, ship
+              the fix, and then check the numbers to see if it actually worked.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.3}>
             <p className="max-w-xl text-[17px] leading-relaxed text-[var(--text-secondary)]">
-              My approach: start with the user&apos;s pain, validate with data,
-              ship fast, and iterate based on real feedback. I&apos;ve applied
-              this across{" "}
+              So far that&apos;s{" "}
               <span className="text-[var(--text-primary)]">
-                FinTech, Healthcare, E-Commerce, and Logistics
-              </span>{" "}
-              — each domain teaching me something different about how people
-              interact with technology.
+                FinTech at BUSY InfoTech and healthcare at MantraCare
+              </span>
+              : reconciliation and in-product payments on one side,
+              therapist-and-doctor matching on the other. Different users, same
+              rule: their pain sets the roadmap.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.4}>
             <div className="flex flex-col gap-3 pt-2">
               <p className="text-sm text-[var(--text-muted)]">
-                BTech in CSE — VIT Bhopal (8.02 GPA)
+                BTech CSE, VIT Bhopal · 8.02 GPA · NSO Gold Medalist
               </p>
               <div className="flex flex-wrap gap-2">
                 {CERTS.map((cert) => (

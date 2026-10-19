@@ -3,16 +3,15 @@
 import { motion } from "framer-motion";
 
 const COMPANIES = [
-  { name: "Busy Infotech", sub: "An IndiaMART Company" },
-  { name: "CareSetu", sub: null },
-  { name: "S-CUBE Technologies", sub: null },
+  { name: "BUSY InfoTech", sub: "An IndiaMART company" },
+  { name: "MantraCare", sub: "B2C Healthcare" },
 ];
 
 export default function ProofBar() {
   return (
     <section className="relative border-y border-[var(--line)]">
       <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-6 px-6 py-8 sm:flex-row sm:gap-12 md:px-12 lg:px-16">
-        <span className="eyebrow shrink-0">I&apos;ve worked with</span>
+        <span className="eyebrow shrink-0">Shipped at</span>
         <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16">
           {COMPANIES.map((company, i) => (
             <motion.div

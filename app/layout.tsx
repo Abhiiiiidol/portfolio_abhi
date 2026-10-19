@@ -18,23 +18,27 @@ const display = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Abhinav Kumar — Product Manager",
+  metadataBase: new URL("https://portfolio-abhi-dun.vercel.app"),
+  title: "Abhinav Kumar — Product Manager, FinTech & AI",
   description:
-    "Product Manager with 2+ years shipping across FinTech, Healthcare, E-Commerce, and Logistics. I pair deep user empathy with sharp product strategy to turn ambiguity into roadmaps that ship.",
+    "Associate PM at BUSY InfoTech. 0→1 product on a 4.6 lakh+ user platform, 40% fewer drop-offs, AI features across FinTech and HealthTech.",
   keywords: [
     "Product Manager",
+    "Associate Product Manager",
     "Abhinav Kumar",
     "FinTech",
-    "Healthcare",
-    "E-Commerce",
+    "HealthTech",
     "AI Product",
   ],
   authors: [{ name: "Abhinav Kumar" }],
   openGraph: {
-    title: "Abhinav Kumar — Product Manager",
+    title: "Abhinav Kumar — Product Manager, FinTech & AI",
     description:
-      "Product Manager with 2+ years shipping across FinTech, Healthcare, E-Commerce, and Logistics.",
+      "Associate PM building AI-powered FinTech at BUSY InfoTech. Find the friction, ship the fix.",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
