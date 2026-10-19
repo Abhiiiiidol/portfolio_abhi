@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 /* Black / White / Sapphire, sampled from the VELARA reference (hue ~224°). The deep sapphire is only 2.2:1
-   on black, so there it is a FILL (white text on it is 9.5:1); --lime (6.2:1 on black) is the only blue
-   allowed as text or hairlines on black. */
+   on black, so there it is a FILL (white text on it is 9.5:1); --lime (4.7:1 on black, AA at every size)
+   is the only blue allowed as text or hairlines on black. */
 :root {
   --cosmic-bg: #000000;
   --cosmic-surface: #0a0a0a;
-  --lime: #5f86f2;
+  --lime: #4a6fe3;
   --lime-deep: #1c3e9c;
   --text-primary: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.68);

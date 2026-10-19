@@ -12,7 +12,15 @@ export default function About() {
     <section id="about" className="relative py-24 lg:py-32">
       <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-16 px-6 md:px-12 lg:flex-row lg:gap-20 lg:px-16">
         <FadeIn className="relative shrink-0">
-          <div className="relative h-[320px] w-[260px] overflow-hidden lg:h-[400px] lg:w-[320px]">
+          <div
+            className="relative h-[320px] w-[260px] overflow-hidden lg:h-[400px] lg:w-[320px]"
+            style={{
+              maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent), linear-gradient(to bottom, transparent, black 8%, black 90%, transparent)",
+              WebkitMaskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent), linear-gradient(to bottom, transparent, black 8%, black 90%, transparent)",
+              maskComposite: "intersect",
+              WebkitMaskComposite: "source-in",
+            }}
+          >
             <Image
               src="/abhinav.jpeg"
               alt="Abhinav Kumar"

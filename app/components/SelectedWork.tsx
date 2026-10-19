@@ -74,10 +74,8 @@ export default function SelectedWork() {
                 </div>
 
                 <div className="flex flex-col gap-5">
-                  <h3 className="text-xl font-semibold text-[var(--text-primary)] lg:text-2xl">
-                    <span className="-mx-[0.2em] bg-[linear-gradient(var(--lime-deep),var(--lime-deep))] bg-[length:0%_100%] bg-no-repeat px-[0.2em] py-0.5 transition-[background-size,color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] [-webkit-box-decoration-break:clone] [box-decoration-break:clone] group-hover:bg-[length:100%_100%] group-hover:text-white">
-                      {project.title}
-                    </span>
+                  <h3 className="text-xl font-semibold text-[var(--text-primary)] transition-colors duration-300 group-hover:text-[var(--lime)] lg:text-2xl">
+                    {project.title}
                   </h3>
 
                   <div className="grid gap-5 md:grid-cols-2 md:gap-8 lg:grid-cols-1 xl:grid-cols-2">

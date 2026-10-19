@@ -52,7 +52,7 @@ export default function Experience() {
           {ROLES.map((role, i) => (
             <FadeIn key={role.company} delay={i * 0.15}>
               <div className="relative border-l border-[var(--line)] py-8 pl-8">
-                <div className="absolute -left-1 top-10 h-2 w-2 bg-[var(--lime)]" />
+                <div aria-hidden="true" className="absolute -left-[3.5px] top-10 h-2 w-2 rotate-45 bg-[var(--lime)] shadow-[inset_1px_1px_0_rgba(255,255,255,0.6)]" />
 
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
                   <h3 className="text-xl font-semibold text-[var(--text-primary)]">

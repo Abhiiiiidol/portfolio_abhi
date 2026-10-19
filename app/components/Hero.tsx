@@ -28,7 +28,7 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-[1240px] items-center gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-8">
         <HeroCopy />
         <motion.div className="relative w-full" style={{ y: mediaY, opacity: mediaOpacity }} initial={{ opacity: 0, scale: .96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, delay: .15, ease: [0.22, 1, 0.36, 1] }}>
-          {/* The file is baked grayscale with its backdrop crushed to true black, so on the #000 page only a thin edge feather is needed */}
+          {/* Baked with ffmpeg: grayscale except the light rings (shifted to sapphire), blacks crushed after the colour pass so the backdrop is true #000 */}
           <div
             style={{
               maskImage: "linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 5%, black 86%, transparent 100%)",
@@ -41,10 +41,10 @@ export default function Hero() {
               ref={videoRef}
               className="pointer-events-none block aspect-video w-full object-cover"
               autoPlay muted loop playsInline preload="metadata"
-              poster="/hero-video-mono-poster.jpg"
+              poster="/hero-video-sapphire-poster.jpg"
               aria-label="Introduction video featuring Abhinav Kumar"
             >
-              <source src="/hero-video-mono.mp4" type="video/mp4" />
+              <source src="/hero-video-sapphire.mp4" type="video/mp4" />
             </video>
           </div>
         </motion.div>

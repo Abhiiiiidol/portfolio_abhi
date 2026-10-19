@@ -43,16 +43,14 @@ export default function HeroCopy() {
         className="display text-[clamp(2.5rem,4.4vw,3.75rem)] text-white"
       >
         Hi, I&apos;m{" "}
-        <span className="relative isolate inline-block px-[0.12em]">
-          <motion.span
-            aria-hidden="true"
-            className="absolute inset-0 -z-10 origin-left bg-[var(--lime-deep)]"
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.6, delay: 0.7, ease: EASE }}
-          />
+        <motion.span
+          className="inline-block text-[var(--lime)]"
+          initial={{ opacity: 0, y: "0.15em" }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.75, ease: EASE }}
+        >
           Abhinav
-        </span>
+        </motion.span>
       </motion.h1>
 
       <motion.h2
