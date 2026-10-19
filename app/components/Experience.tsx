@@ -1,5 +1,3 @@
-"use client";
-
 import FadeIn from "./FadeIn";
 
 type Role = {
@@ -41,13 +39,11 @@ export default function Experience() {
     <section id="experience" className="relative py-24 lg:py-32">
       <div className="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
         <FadeIn>
-          <span className="font-[family-name:var(--font-geist-mono)] text-xs uppercase tracking-[0.2em] text-[var(--lime)]">
-            Experience
-          </span>
+          <span className="eyebrow">Experience</span>
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <h2 className="mt-4 text-3xl font-semibold text-[var(--text-primary)] lg:text-4xl">
+          <h2 className="display display-2 mt-4 text-[var(--text-primary)]">
             Where I&apos;ve built
           </h2>
         </FadeIn>
@@ -55,12 +51,8 @@ export default function Experience() {
         <div className="mt-14 flex flex-col gap-0">
           {ROLES.map((role, i) => (
             <FadeIn key={role.company} delay={i * 0.15}>
-              <div
-                className="relative border-l-2 border-[var(--lime)]/20 py-8 pl-8"
-              >
-                <div
-                  className="absolute -left-[7px] top-10 h-3 w-3 rounded-full border-2 border-[var(--accent-2)] bg-[var(--cosmic-bg)]"
-                />
+              <div className="relative border-l border-[var(--line)] py-8 pl-8">
+                <div className="absolute -left-1 top-10 h-2 w-2 bg-[var(--lime)]" />
 
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
                   <h3 className="text-xl font-semibold text-[var(--text-primary)]">
@@ -89,7 +81,7 @@ export default function Experience() {
                   {role.highlights.map((h, j) => (
                     <li
                       key={j}
-                      className="relative pl-4 text-[15px] leading-relaxed text-[var(--text-secondary)] before:absolute before:left-0 before:top-[10px] before:h-1 before:w-1 before:rounded-full before:bg-[var(--lime)]/40"
+                      className="relative pl-4 text-[15px] leading-relaxed text-[var(--text-secondary)] before:absolute before:left-0 before:top-[12px] before:h-px before:w-2 before:bg-[var(--text-muted)]"
                     >
                       {h}
                     </li>

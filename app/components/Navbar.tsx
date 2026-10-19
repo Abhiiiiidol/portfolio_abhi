@@ -22,11 +22,7 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
@@ -34,26 +30,21 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "border-b border-white/[0.06] bg-[var(--cosmic-bg)]/90 backdrop-blur-xl"
-          : "bg-transparent"
+      className={`fixed left-0 right-0 top-0 z-50 border-b bg-black transition-colors duration-300 ${
+        scrolled ? "border-white/[0.14]" : "border-transparent"
       }`}
     >
       <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-6 md:px-12 lg:px-16">
-        <a
-          href="#"
-          className="text-xl font-bold tracking-tight text-[var(--text-primary)]"
-        >
+        <a href="#" className="display text-2xl text-white" aria-label="Abhinav Kumar — back to top">
           AK<span className="text-[var(--lime)]">.</span>
         </a>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-10 md:flex">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+              className="eyebrow transition-colors hover:text-white"
             >
               {link.label}
             </a>
@@ -64,17 +55,17 @@ export default function Navbar() {
           href="/Abhinav_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden h-10 items-center gap-2 rounded-full bg-gradient-to-r from-[var(--lime-deep)] via-[var(--lime)] to-[var(--accent-3)] px-6 text-sm font-semibold text-white transition-transform hover:scale-[1.03] active:scale-[0.97] md:inline-flex"
-          style={{ boxShadow: "0 0 24px rgba(var(--accent-rgb),0.3)" }}
+          className="hidden h-9 items-center gap-2 border border-white/30 px-4 text-[11px] font-medium uppercase tracking-[0.2em] text-white transition-colors hover:bg-white hover:text-black md:inline-flex"
         >
-          <Download size={14} />
+          <Download size={13} />
           Resume
         </a>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="flex items-center justify-center text-[var(--text-primary)] md:hidden"
+          className="flex h-10 w-10 items-center justify-center text-white md:hidden"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileOpen}
         >
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -87,15 +78,15 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute inset-x-0 top-16 border-b border-[var(--line)] bg-[var(--cosmic-bg)]/95 backdrop-blur-xl md:hidden"
+            className="absolute inset-x-0 top-16 border-b border-white/[0.14] bg-black md:hidden"
           >
-            <div className="flex flex-col gap-1 px-6 py-4">
+            <div className="flex flex-col px-6 pb-6">
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-lg px-4 py-3 text-sm text-[var(--text-secondary)] transition-colors hover:bg-[var(--surface-hover)] hover:text-[var(--text-primary)]"
+                  className="flex h-12 items-center border-b border-white/10 text-[13px] font-medium uppercase tracking-[0.2em] text-white/70 transition-colors hover:text-white"
                 >
                   {link.label}
                 </a>
@@ -105,7 +96,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 inline-flex h-10 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[var(--lime-deep)] via-[var(--lime)] to-[var(--accent-3)] text-sm font-semibold text-white"
+                className="btn-slab mt-6"
               >
                 <Download size={14} />
                 Resume

@@ -1,8 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
 import FadeIn from "./FadeIn";
-import TiltCard from "./TiltCard";
 
 type Project = {
   title: string;
@@ -48,95 +44,75 @@ const PROJECTS: Project[] = [
 
 export default function SelectedWork() {
   return (
-    <section
-      id="work"
-      className="relative bg-[var(--cosmic-surface)] py-24 lg:py-32"
-    >
+    <section id="work" className="surface-paper relative py-24 lg:py-32">
       <div className="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
         <FadeIn>
-          <span className="font-[family-name:var(--font-geist-mono)] text-xs uppercase tracking-[0.2em] text-[var(--lime)]">
-            Selected Work
-          </span>
+          <span className="eyebrow">Selected Work</span>
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <h2 className="mt-4 text-3xl font-semibold text-[var(--text-primary)] lg:text-4xl">
-            Products I&apos;ve shaped
+          <h2 className="display display-2 mt-4 text-[var(--text-primary)]">
+            Products I&apos;ve <span className="text-[var(--lime)]">shaped</span>
           </h2>
         </FadeIn>
 
-        <div className="mt-14 flex flex-col gap-6">
+        <div className="mt-14 border-b border-[var(--line)]">
           {PROJECTS.map((project, i) => (
             <FadeIn key={project.title} delay={i * 0.12}>
-              <TiltCard className="relative">
-              <motion.article
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.2 }}
-                className="group relative overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--cosmic-bg)] p-6 sm:p-8 lg:p-10"
-              >
-                <div className="flex flex-col gap-6 lg:flex-row lg:gap-12">
-                  <div className="flex flex-1 flex-col gap-4">
-                    <div className="flex flex-col gap-1">
-                      <span className="font-[family-name:var(--font-geist-mono)] text-xs text-[var(--text-muted)]">
-                        {project.category}
+              <article className="group grid gap-6 border-t border-[var(--line)] py-10 lg:grid-cols-[170px_1fr_260px] lg:gap-12 lg:py-12">
+                <div className="flex gap-4 lg:flex-col lg:gap-2">
+                  <span className="font-[family-name:var(--font-geist-mono)] text-xs text-[var(--text-muted)]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-[11px] uppercase tracking-[0.14em] text-[var(--text-muted)]">
+                    {project.category.split(" · ").map((part) => (
+                      <span key={part} className="block">
+                        {part}
                       </span>
-                      <h3 className="text-xl font-semibold text-[var(--text-primary)] lg:text-2xl">
-                        {project.title}
-                      </h3>
-                    </div>
+                    ))}
+                  </span>
+                </div>
 
-                    <div className="flex flex-col gap-3">
-                      <div>
-                        <span className="text-xs font-medium uppercase tracking-wider text-[var(--text-muted)]">
-                          Problem
-                        </span>
-                        <p className="mt-1 text-[15px] leading-relaxed text-[var(--text-secondary)]">
-                          {project.problem}
-                        </p>
-                      </div>
-                      <div>
-                        <span className="text-xs font-medium uppercase tracking-wider text-[var(--text-muted)]">
-                          What I did
-                        </span>
-                        <p className="mt-1 text-[15px] leading-relaxed text-[var(--text-secondary)]">
-                          {project.outcome}
-                        </p>
-                      </div>
-                    </div>
+                <div className="flex flex-col gap-5">
+                  <h3 className="text-xl font-semibold text-[var(--text-primary)] lg:text-2xl">
+                    <span className="-mx-[0.2em] bg-[linear-gradient(var(--lime-deep),var(--lime-deep))] bg-[length:0%_100%] bg-no-repeat px-[0.2em] py-0.5 transition-[background-size,color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] [-webkit-box-decoration-break:clone] [box-decoration-break:clone] group-hover:bg-[length:100%_100%] group-hover:text-white">
+                      {project.title}
+                    </span>
+                  </h3>
 
-                    <div className="flex flex-wrap gap-2 pt-1">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-full border border-[var(--line)] bg-[var(--surface-hover)] px-3 py-1 text-xs text-[var(--text-muted)]"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                  <div className="grid gap-5 md:grid-cols-2 md:gap-8 lg:grid-cols-1 xl:grid-cols-2">
+                    <div>
+                      <span className="eyebrow">Problem</span>
+                      <p className="mt-2 text-[15px] leading-relaxed text-[var(--text-secondary)]">
+                        {project.problem}
+                      </p>
+                    </div>
+                    <div>
+                      <span className="eyebrow">What I did</span>
+                      <p className="mt-2 text-[15px] leading-relaxed text-[var(--text-secondary)]">
+                        {project.outcome}
+                      </p>
                     </div>
                   </div>
 
-                  {project.metric && (
-                    <div className="flex shrink-0 items-center lg:w-[220px]">
-                      <div className="w-full rounded-xl border border-[var(--lime)]/10 bg-[rgba(var(--accent-rgb),0.03)] px-5 py-5">
-                        <span className="text-xs uppercase tracking-wider text-[var(--text-muted)]">
-                          Impact
-                        </span>
-                        <p className="mt-2 font-[family-name:var(--font-geist-mono)] text-lg font-semibold text-[var(--accent-2)]">
-                          {project.metric}
-                        </p>
-                      </div>
-                    </div>
-                  )}
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity group-hover:opacity-100"
-                  style={{ background: "rgba(var(--accent-rgb),0.06)" }}
-                />
-              </motion.article>
-              </TiltCard>
+                {project.metric && (
+                  <div className="lg:border-l lg:border-[var(--line)] lg:pl-8">
+                    <span className="eyebrow">Impact</span>
+                    <p className="mt-2 text-xl font-medium leading-snug text-[var(--text-primary)]">
+                      {project.metric}
+                    </p>
+                  </div>
+                )}
+              </article>
             </FadeIn>
           ))}
         </div>

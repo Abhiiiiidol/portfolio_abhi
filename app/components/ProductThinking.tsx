@@ -41,13 +41,11 @@ export default function ProductThinking() {
     <section className="relative py-24 lg:py-32">
       <div className="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
         <FadeIn>
-          <span className="font-[family-name:var(--font-geist-mono)] text-xs uppercase tracking-[0.2em] text-[var(--lime)]">
-            How I Think
-          </span>
+          <span className="eyebrow">How I Think</span>
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <h2 className="mt-4 max-w-2xl text-3xl font-semibold text-[var(--text-primary)] lg:text-4xl">
+          <h2 className="display display-2 mt-4 max-w-3xl text-[var(--text-primary)]">
             Product thinking, not feature shipping
           </h2>
         </FadeIn>
@@ -102,7 +100,7 @@ export default function ProductThinking() {
                   }}
                   style={{ transformOrigin: "left" }}
                 />
-                <span className="font-[family-name:var(--font-geist-mono)] text-xs text-[var(--lime)] transition-all group-hover:text-[var(--lime-soft)]">
+                <span className="font-[family-name:var(--font-geist-mono)] text-xs text-[var(--text-muted)] transition-colors group-hover:text-white">
                   {step.number}
                 </span>
                 <h3 className="text-lg font-semibold text-[var(--text-primary)]">

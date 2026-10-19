@@ -1,7 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
 import FadeIn from "./FadeIn";
 
 const CERTS = [
@@ -12,47 +9,27 @@ const CERTS = [
 
 export default function About() {
   return (
-    <section
-      id="about"
-      className="relative py-24 lg:py-32"
-    >
+    <section id="about" className="relative py-24 lg:py-32">
       <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-16 px-6 md:px-12 lg:flex-row lg:gap-20 lg:px-16">
         <FadeIn className="relative shrink-0">
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] as const }}
-            className="relative h-[320px] w-[260px] overflow-hidden rounded-2xl lg:h-[400px] lg:w-[320px]"
-          >
+          <div className="relative h-[320px] w-[260px] overflow-hidden lg:h-[400px] lg:w-[320px]">
             <Image
               src="/abhinav.jpeg"
               alt="Abhinav Kumar"
               fill
-              className="object-cover transition-transform duration-700 hover:scale-105"
+              className="object-cover grayscale"
               sizes="(max-width: 1024px) 260px, 320px"
             />
-            <div
-              className="absolute inset-0 rounded-2xl"
-              style={{
-                boxShadow: "inset 0 0 0 1px rgba(var(--accent-rgb),0.15)",
-              }}
-            />
-          </motion.div>
-          <div
-            aria-hidden="true"
-            className="absolute -inset-4 -z-10 rounded-3xl opacity-30 blur-3xl"
-            style={{ background: "rgba(var(--accent-rgb),0.08)" }}
-          />
+          </div>
         </FadeIn>
 
         <div className="flex flex-col gap-6">
           <FadeIn>
-            <span className="font-[family-name:var(--font-geist-mono)] text-xs uppercase tracking-[0.2em] text-[var(--lime)]">
-              About
-            </span>
+            <span className="eyebrow">About</span>
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <h2 className="text-3xl font-semibold leading-tight text-[var(--text-primary)] lg:text-4xl">
+            <h2 className="display display-2 text-[var(--text-primary)]">
               I turn ambiguity into
               <br />
               products that ship.
@@ -88,10 +65,7 @@ export default function About() {
               </p>
               <div className="flex flex-wrap gap-2">
                 {CERTS.map((cert) => (
-                  <span
-                    key={cert}
-                    className="rounded-full border border-[var(--accent-warm)]/20 bg-[var(--accent-warm)]/5 px-3 py-1 text-xs text-[var(--text-secondary)]"
-                  >
+                  <span key={cert} className="tag">
                     {cert}
                   </span>
                 ))}

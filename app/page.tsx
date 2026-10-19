@@ -1,5 +1,4 @@
 import Navbar from "./components/Navbar";
-import ScrollProgress from "./components/ScrollProgress";
 import Hero from "./components/Hero";
 import ProofBar from "./components/ProofBar";
 import About from "./components/About";
@@ -9,15 +8,11 @@ import ProductThinking from "./components/ProductThinking";
 import Toolkit from "./components/Toolkit";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import SmoothScroll from "./components/SmoothScroll";
-import CustomCursor from "./components/CustomCursor";
+import MotionProvider from "./components/MotionProvider";
 
 export default function Home() {
   return (
-    <>
-      <SmoothScroll />
-      <CustomCursor />
-      <ScrollProgress />
+    <MotionProvider>
       <Navbar />
       <main className="flex flex-1 flex-col">
         <Hero />
@@ -30,6 +25,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </MotionProvider>
   );
 }

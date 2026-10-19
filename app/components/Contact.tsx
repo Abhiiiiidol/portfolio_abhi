@@ -1,24 +1,17 @@
-"use client";
-
 import { Mail, Download, ExternalLink } from "lucide-react";
 import FadeIn from "./FadeIn";
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="relative bg-[var(--cosmic-surface)] py-24 lg:py-32"
-    >
+    <section id="contact" className="surface-cobalt relative py-24 lg:py-32">
       <div className="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
         <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
           <FadeIn>
-            <span className="font-[family-name:var(--font-geist-mono)] text-xs uppercase tracking-[0.2em] text-[var(--lime)]">
-              Get in Touch
-            </span>
+            <span className="eyebrow">Get in Touch</span>
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <h2 className="mt-4 text-3xl font-semibold text-[var(--text-primary)] lg:text-4xl">
+            <h2 className="display display-2 mt-4 text-[var(--text-primary)]">
               Let&apos;s build something
               <br />
               great together.
@@ -26,20 +19,25 @@ export default function Contact() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <p className="mt-4 text-[17px] leading-relaxed text-[var(--text-secondary)]">
+            <p className="mt-5 text-[17px] leading-relaxed text-[var(--text-secondary)]">
               I&apos;m open to Product Manager roles, collaborations, and
               conversations about product, AI, and building things people love.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row">
+            <div className="mt-10 flex flex-col items-center gap-8 sm:flex-row">
               <a
                 href="mailto:rajputabhinav1245@gmail.com"
-                className="group inline-flex h-12 items-center gap-2 rounded-full bg-gradient-to-r from-[var(--lime-deep)] via-[var(--lime)] to-[var(--accent-3)] px-7 text-sm font-semibold text-white transition-transform hover:scale-[1.02] active:scale-[0.98]"
-                style={{ boxShadow: "0 14px 28px rgba(var(--accent-rgb),0.22)" }}
+                className="btn-slab w-full font-semibold sm:w-auto"
+                style={{
+                  "--btn-bg": "#ffffff",
+                  "--btn-fg": "#2c3480",
+                  "--btn-wipe": "#000000",
+                  "--btn-wipe-fg": "#ffffff",
+                } as React.CSSProperties}
               >
-                <Mail size={16} />
+                <Mail size={15} />
                 Email me
               </a>
 
@@ -47,9 +45,9 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/in29abhinav/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-hover)] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/50 hover:bg-[rgba(var(--accent-rgb),0.06)]"
+                className="link-editorial font-semibold"
               >
-                <ExternalLink size={16} />
+                <ExternalLink size={14} />
                 LinkedIn
               </a>
 
@@ -57,9 +55,9 @@ export default function Contact() {
                 href="/Abhinav_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-hover)] px-7 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/50 hover:bg-[rgba(var(--accent-rgb),0.06)]"
+                className="link-editorial font-semibold"
               >
-                <Download size={16} />
+                <Download size={14} />
                 Resume
               </a>
             </div>

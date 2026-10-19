@@ -1,9 +1,9 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import TextScramble from "../TextScramble";
 import RotatingText from "../RotatingText";
-import MagneticButton from "../MagneticButton";
+
+const EASE = [0.22, 1, 0.36, 1] as const;
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -31,90 +31,78 @@ export default function HeroCopy() {
       variants={container}
       initial="hidden"
       animate="show"
-      className="isolate flex flex-col gap-4 text-left"
+      className="flex flex-col gap-5 text-left"
     >
-      <motion.span
-        variants={item}
-        className="inline-flex w-fit items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--text-primary)] backdrop-blur-sm"
-      >
-        <span className="h-1.5 w-1.5 rounded-full bg-[#22c55e]" />
+      <motion.span variants={item} className="eyebrow flex items-center gap-3">
+        <span aria-hidden="true" className="h-px w-8 bg-[var(--lime)]" />
         Product Manager
       </motion.span>
 
       <motion.h1
         variants={item}
-        className="text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-[1.1] tracking-tight text-[var(--text-primary)]"
+        className="display text-[clamp(2.5rem,4.4vw,3.75rem)] text-white"
       >
         Hi, I&apos;m{" "}
-        <span className="relative inline-block">
-          <span className="text-[var(--lime)]">
-            <TextScramble text="Abhinav" delay={600} />
-          </span>
-          <span
+        <span className="relative isolate inline-block px-[0.12em]">
+          <motion.span
             aria-hidden="true"
-            className="absolute inset-0 -z-10 blur-2xl"
-            style={{ background: "rgba(var(--accent-rgb),0.25)" }}
+            className="absolute inset-0 -z-10 origin-left bg-[var(--lime-deep)]"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.6, delay: 0.7, ease: EASE }}
           />
+          Abhinav
         </span>
       </motion.h1>
 
       <motion.h2
         variants={item}
-        className="min-h-[2em] text-[clamp(1rem,2vw,1.35rem)] font-medium leading-tight text-[var(--text-secondary)] sm:min-h-[1.4em]"
+        className="min-h-[2.6em] text-[clamp(1rem,1.6vw,1.25rem)] leading-snug text-[var(--text-secondary)] sm:min-h-[1.4em]"
       >
         <RotatingText />
       </motion.h2>
 
       <motion.p
         variants={item}
-        className="max-w-lg text-[clamp(0.8rem,1.2vw,0.938rem)] leading-relaxed text-[var(--text-secondary)]"
+        className="max-w-lg text-[clamp(0.875rem,1.15vw,0.95rem)] leading-relaxed text-[var(--text-secondary)]"
       >
         Product Manager with{" "}
-        <span className="font-semibold text-[var(--text-primary)]">2+ years</span> of experience across
+        <span className="text-white">2+ years</span> of experience across
         FinTech, Healthcare, E-Commerce and Logistics. I combine deep{" "}
-        <span className="text-[var(--lime)]">user empathy</span> with data-driven{" "}
-        <span className="text-[var(--lime)]">product strategy</span> to build scalable,
+        <span className="text-white">user empathy</span> with data-driven{" "}
+        <span className="text-white">product strategy</span> to build scalable,
         real-world solutions.
       </motion.p>
 
-      <motion.div variants={item} className="flex flex-wrap items-center gap-3 pt-1">
-        <MagneticButton strength={0.3} data-magnetic>
-          <a
-            href="#work"
-            className="group relative inline-flex h-11 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-[var(--lime-deep)] via-[var(--lime)] to-[var(--accent-3)] px-6 text-sm font-semibold text-white transition-transform hover:scale-[1.02] active:scale-[0.98]"
-            style={{ boxShadow: "0 0 24px rgba(var(--accent-rgb),0.35)" }}
-          >
-            See my work
-            <span aria-hidden="true" className="ml-2 transition-transform group-hover:translate-x-0.5">
-              →
-            </span>
-          </a>
-        </MagneticButton>
-        <MagneticButton strength={0.3} data-magnetic>
-          <a
-            href="#contact"
-            className="inline-flex h-11 items-center justify-center rounded-full border border-white/[0.1] bg-white/[0.04] px-6 text-sm font-medium text-[var(--text-primary)] backdrop-blur-sm transition-colors hover:border-[var(--lime)]/40 hover:bg-white/[0.08]"
-          >
-            Get in touch
-          </a>
-        </MagneticButton>
+      <motion.div variants={item} className="flex flex-col items-start gap-6 pt-1 sm:flex-row sm:items-center sm:gap-8">
+        <a href="#work" className="btn-slab w-full sm:w-auto">
+          See my work
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="#contact" className="link-editorial">
+          Get in touch
+          <svg aria-hidden="true" width="28" height="10" viewBox="0 0 28 10" fill="none">
+            <path d="M0 5h26M22 1l4 4-4 4" stroke="currentColor" strokeWidth="1.2" />
+          </svg>
+        </a>
       </motion.div>
 
-      <motion.div
+      <motion.dl
         variants={item}
-        className="mt-2 grid grid-cols-2 gap-x-5 gap-y-3 sm:grid-cols-4 sm:gap-x-6"
+        className="mt-3 grid grid-cols-2 gap-x-5 gap-y-4 border-t border-[var(--line)] pt-5 sm:grid-cols-4 sm:gap-x-0"
       >
         {STATS.map((stat, i) => (
-          <div key={stat.label} className={`flex flex-col gap-0.5 ${i > 0 ? "sm:border-l sm:border-white/[0.06] sm:pl-6" : ""}`}>
-            <span className="font-[family-name:var(--font-geist-mono)] text-lg font-bold text-[var(--lime)] lg:text-xl">
-              {stat.value}
-            </span>
-            <span className="text-[11px] text-[var(--text-muted)]">
+          <div
+            key={stat.label}
+            className={`flex flex-col-reverse justify-end gap-1 ${i > 0 ? "sm:border-l sm:border-[var(--line)] sm:pl-4" : ""}`}
+          >
+            <dt className="text-[10px] uppercase tracking-[0.18em] text-[var(--text-muted)] xl:whitespace-nowrap">
               {stat.label}
-            </span>
+            </dt>
+            <dd className="text-2xl font-medium tabular-nums text-white">{stat.value}</dd>
           </div>
         ))}
-      </motion.div>
+      </motion.dl>
     </motion.div>
   );
 }
