@@ -41,10 +41,10 @@ export default function Hero() {
               ref={videoRef}
               className="pointer-events-none block aspect-video w-full object-cover"
               autoPlay muted loop playsInline preload="metadata"
-              poster="/hero-video-sapphire-poster.jpg"
+              poster="/hero-video-sapphire-v2-poster.jpg"
               aria-label="Introduction video featuring Abhinav Kumar"
             >
-              <source src="/hero-video-sapphire.mp4" type="video/mp4" />
+              <source src="/hero-video-sapphire-v2.mp4" type="video/mp4" />
             </video>
           </div>
         </motion.div>
